@@ -24,7 +24,7 @@ const Contact = () => {
                       id="form_name"
                       type="text"
                       name="name"
-                      placeholder="Name"
+                      placeholder="Full Name"
                       required="required"
                     />
                   </div>
