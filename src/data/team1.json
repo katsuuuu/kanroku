@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "image": "/assets/img/team/7.jpg",
+    "facebook": "#",
+    "twitter": "#",
+    "behance": "#",
+    "linkedin": "https://www.linkedin.com/in/shiho-kawamoto-97921617a/?originalSubdomain=jp",
+    "username": "Shiho Kawamoto",
+    "usertitle": "CEO, Serial Entrepreneur, Board Member. Shiho Founded kanroku Inc. in November 2020."
+  },
+  {
+    "id": 2,
+    "image": "/assets/img/team/8.jpg",
+    "facebook": "#",
+    "twitter": "#",
+    "behance": "#",
+    "linkedin": "https://www.linkedin.com/in/%E5%AF%8C-%E3%82%88%E3%82%88-961081a8/?originalSubdomain=jp",
+    "username": "Yoyo Tomi",
+    "usertitle": "Co-Partner, Prior to joining Kanroku Inc. since 2023, Yoyo was at Operations division at Morgan Stanley."
+  },
+  {
+    "id": 3,
+    "image": "/assets/img/team/twoagents.jpg",
+    "facebook": "#",
+    "twitter": "#",
+    "behance": "#",
+    "linkedin": "#",
+    "username": "",
+    "usertitle": ""
+  }
+]

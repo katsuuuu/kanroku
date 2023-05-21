@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "image": "/assets/img/rocks.jpg",
+    "icon": "icon flaticon-computer",
+    "title": "Brokerage",
+    "content": "An excellent agent will make a proposal that is close to each customer. Since there are few companies in Japan that provide services with overseas investors in mind, we will strive to be a bridge between them."
+  },
+  {
+    "id": 2,
+    "image": "/assets/img/rocks.jpg",
+    "icon": "icon flaticon-plan",
+    "title": "Management business",
+    "content": "（sophisticated management）We provide condominium management by professional staff with high expertise. Utilizing our own condominium management information system, We propose optimal management services that match the current condition of the customer's condominium."
+  },
+  {
+    "id": 3,
+    "image": "/assets/img/rocks.jpg",
+    "icon": "icon flaticon-desk-lamp",
+    "title": "Extensive network",
+    "content": "Utilizing our network of personal connections unique to Japanese people, we carefully support everything from acquiring properties that are difficult to obtain information to consulting on borrowing from Japanese banks when purchasing real estate, and after that, from management to sales."
+  }
+]

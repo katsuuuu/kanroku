@@ -1,0 +1,25 @@
+{
+  "title": {
+    "first": "Our Vision",
+    "second": ""
+  },
+  "image1": "/assets/img/two_nobg.png",
+  "image2": "/assets/img/japandi_1.jpeg",
+  "content": "Our vision is to position Japan as a major investment market and bring short and long term benefits to our clients. Through its deep expertise and extensive network, Kanroku provides valuable support to meet our customer needs.",
+
+  "exp": 21,
+  "textList": [
+    {
+      "id": 1,
+      "name": "Extensive Network"
+    },
+    {
+      "id": 2,
+      "name": "Deep Expertise"
+    },
+    {
+      "id": 3,
+      "name": "Bilingual"
+    }
+  ]
+}
