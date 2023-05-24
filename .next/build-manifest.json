@@ -25,15 +25,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/about": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/about.js"
+    ],
     "/home3": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/home3.js"
-    ],
-    "/market-overview": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/market-overview.js"
     ]
   },
   "ampFirstPages": []

@@ -32,10 +32,9 @@ class Team1 extends React.Component {
                   Team
                 </h3>
                 <p className="wow fadeInUp" data-wow-delay=".3s">
-                  sentences our team is. placeholder. sentences our team is.
-                  placeholder. sentences our team is. placeholder. sentences our
-                  team is. placeholder. sentences our team is. placeholder.
-                  sentences our team is. placeholder.
+                  We are an agent-type real estate brokerage company that
+                  gathers bilingual human resources and mediates mainly Japanese
+                  real estate to overseas investors.
                 </p>
                 {this.renderArrows()}
               </div>
