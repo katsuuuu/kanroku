@@ -1,0 +1,28 @@
+# production
+/build
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# local env files
+.env
+.env.*
+!.env.example
+
+yarn.lock
+
+# misc
+.DS_Store
+*.pem
+
+# vercel
+.vercel
