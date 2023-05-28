@@ -1,5 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "react-i18next";
+import { useRouter } from "next/router";
+
 import AboutUs3 from "../../components/About-Us3";
 import AboutUs2 from "../../components/About-Us2";
 import AfterBefore from "../../components/After-Before";
@@ -11,14 +15,20 @@ import Team1 from "../../components/Team1";
 import Testimonials1 from "../../components/Testimonials1";
 import Works1 from "../../components/Works1";
 import LightLayout from "../../layouts/light";
+
 const Home3 = () => {
+  const router = useRouter();
+  const { t, ready } = useTranslation("common");
+
+  console.log("router", router);
+
   React.useEffect(() => {
     document.querySelector("body").classList.add("homepage");
   }, []);
   return (
     <LightLayout>
-      <Intro3 />
-      <Services3 />
+      <Intro3 t={t} ready={ready} />
+      <Services3 t={t} ready={ready} />
       {/* <Works1 /> */}
       <AboutUs2 />
       {/* <AfterBefore />
@@ -29,5 +39,11 @@ const Home3 = () => {
     </LightLayout>
   );
 };
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? "en", ["common"])),
+  },
+});
 
 export default Home3;

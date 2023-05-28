@@ -1,10 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import { useTranslation } from "react-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
 import MainLayout from "../../layouts/main";
 import WorkHeader from "../../components/Work-header";
 import WorkFourColumn from "../../components/Work-Four-Column";
 
 const Work3 = () => {
+  const { t, ready } = useTranslation("common");
+
   React.useEffect(() => {
     document.querySelector("body").classList.add("index3");
   }, []);
@@ -13,15 +18,20 @@ const Work3 = () => {
       <WorkHeader
         center
         title={{
-          first: "Architecture is a visual art,",
-          second: "and the building speak for themeselves",
+          first: t("work3.title.first"),
+          second: t("work3.title.second"),
         }}
-        // title = "text",
-        content="Architecture bibendum pharetra eleifend. Suspendisse vel volutpat purus, sit amet bibendum nisl. Cras mollis turpis a ipsum ultes, nec condimentum ipsum consequat. Mauris vitae consequat nibh, vitae interdum mi."
+        content={t("work3.content")}
       />
-      <WorkFourColumn />
+      <WorkFourColumn t={t} ready={ready} />
     </MainLayout>
   );
 };
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? "en", ["common"])),
+  },
+});
 
 export default Work3;

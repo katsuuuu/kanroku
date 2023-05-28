@@ -1,10 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import { useRouter } from "next/router";
+// import { useTranslation, Trans } from "next-i18next";
+
 import appData from "../../data/app.json";
 import getSiblings from "../../common/getSiblings";
 
 const Navbar = ({ navbarRef, logoRef, logoClass }) => {
+  const router = useRouter();
+  const { t, ready } = useTranslation("common");
+
   const handleDropdown = (e) => {
     getSiblings(e.target.parentElement)
       .filter((item) => item.classList.contains("show"))
@@ -23,10 +30,16 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
   };
 
   const handleMobileDropdown = (e) => {
-    document
-      .getElementById("navbarSupportedContent")
-      .classList.toggle("show-with-trans");
+    document.getElementById("navbarSupportedContent").classList.toggle("show-with-trans");
   };
+
+  const handleLocaleChange = (locale) => {
+    router.push(router.route, router.asPath, {
+      locale,
+    });
+  };
+
+  if (!ready) return <div>Loading...</div>;
 
   return (
     <>
@@ -59,21 +72,15 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
                   <a className="nav-link">Architecture Light</a>
                 </Link>
               </li> */}
-              <li className="nav-item">
-                <Link href="/about">
-                  <a className="nav-link">Team</a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/market-overview">
-                  <a className="nav-link">Market Overview</a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/properties">
-                  <a className="nav-link">Properties</a>
-                </Link>
-              </li>
+
+              {t("layout.header.menu", { returnObjects: true, useSuspense: false }).map((item) => (
+                <li className="nav-item" key={item.id}>
+                  <Link href={item.link}>
+                    <a className="nav-link">{item.name}</a>
+                  </Link>
+                </li>
+              ))}
+
               {/* <li className="nav-item dropdown" onClick={handleDropdown}>
                 <span
                   className="nav-link dropdown-toggle"
@@ -118,11 +125,14 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
                   </Link>
                 </div>
               </li> */}
-              <li className="nav-item">
-                <Link href="/contact">
-                  <a className="nav-link">Contact</a>
-                </Link>
-              </li>
+            </ul>
+
+            <ul className="locales">
+              {router.locales.map((locale, index) => (
+                <li onClick={() => handleLocaleChange(locale)} key={locale}>
+                  {locale}
+                </li>
+              ))}
             </ul>
           </div>
         </div>

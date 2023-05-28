@@ -29,12 +29,10 @@ class Team1 extends React.Component {
             <div className="col-lg-5">
               <div className="tit">
                 <h3 className="playfont wow flipInX" data-wow-delay=".5s">
-                  Team
+                  {this.props.t("about.team.title")}
                 </h3>
                 <p className="wow fadeInUp" data-wow-delay=".3s">
-                  We are an agent-type real estate brokerage company that
-                  gathers bilingual human resources and mediates mainly Japanese
-                  real estate to overseas investors.
+                  {this.props.t("about.team.description")}
                 </p>
                 {this.renderArrows()}
               </div>
@@ -70,15 +68,17 @@ class Team1 extends React.Component {
                     },
                   ],
                 }}>
-                {Team1Data.map((item) => (
-                  <div
-                    className="item wow fadeInUp"
-                    data-wow-delay=".3s"
-                    key={item.id}>
-                    <div className="img wow imago">
-                      <img src={item.image} alt="" />
-                      <div className="social">
-                        {/* <a href={item.facebook}>
+                {this.props.ready &&
+                  this.props
+                    .t("about.team.slider", {
+                      returnObjects: true,
+                    })
+                    .map((item) => (
+                      <div className="item wow fadeInUp" data-wow-delay=".3s" key={item.id}>
+                        <div className="img wow imago">
+                          <img src={item.image} alt="" />
+                          <div className="social">
+                            {/* <a href={item.facebook}>
                           <i className="fab fa-facebook-f"></i>
                         </a>
                         <a href={item.twitter}>
@@ -87,17 +87,17 @@ class Team1 extends React.Component {
                         <a href={item.behance}>
                           <i className="fab fa-behance"></i>
                         </a> */}
-                        <a href={item.linkedin}>
-                          <i className="fab fa-linkedin-in"></i>
-                        </a>
+                            <a href={item.linkedin}>
+                              <i className="fab fa-linkedin-in"></i>
+                            </a>
+                          </div>
+                        </div>
+                        <div className="info">
+                          <h5>{item.username}</h5>
+                          <span>{item.usertitle}</span>
+                        </div>
                       </div>
-                    </div>
-                    <div className="info">
-                      <h5>{item.username}</h5>
-                      <span>{item.usertitle}</span>
-                    </div>
-                  </div>
-                ))}
+                    ))}
               </Slider>
             </div>
           </div>

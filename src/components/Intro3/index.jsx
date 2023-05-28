@@ -12,7 +12,7 @@ import removeSlashFromPagination from "../../common/removeSlashFromPagination";
 
 SwiperCore.use([Navigation, Pagination, Parallax]);
 
-const Intro3 = () => {
+const Intro3 = ({ t, ready }) => {
   const [load, setLoad] = React.useState(true);
   React.useEffect(() => {
     setTimeout(() => {
@@ -54,7 +54,7 @@ const Intro3 = () => {
                 for (var i = 0; i < swiper.slides.length; i++) {
                   swiper.slides[i].childNodes[0].setAttribute(
                     "data-swiper-parallax",
-                    0.75 * swiper.width
+                    0.75 * swiper.width,
                   );
                 }
 
@@ -74,7 +74,8 @@ const Intro3 = () => {
             }}
             className="swiper-wrapper"
             slidesPerView={1}>
-            {intro3Data.map((slide) => (
+            {/* {intro3Data.map((slide) => ( */}
+            {t("home.slider", { returnObjects: true }).map((slide) => (
               <SwiperSlide key={slide.id} className="swiper-slide">
                 <div
                   className="bg-img valign"
@@ -85,9 +86,7 @@ const Intro3 = () => {
                       <div className="col-lg-7 col-md-9">
                         <div className="caption center">
                           <Split>
-                            <h1
-                              data-splitting
-                              className="playfont words chars splitting">
+                            <h1 data-splitting className="playfont words chars splitting">
                               <Link href="#">
                                 <a>
                                   {slide.title.first} <br />
@@ -96,12 +95,10 @@ const Intro3 = () => {
                               </Link>
                             </h1>
                           </Split>
-                          {slide?.content && (
-                            <p className="mt-10">{slide.content}</p>
-                          )}
-                          <Link href="/properties">
+                          {slide?.content && <p className="mt-10">{slide.content}</p>}
+                          <Link href={slide.buttonLink}>
                             <a className="btn-curve btn-color mt-20">
-                              <span>Discover Work</span>
+                              <span>{slide.buttonText}</span>
                             </a>
                           </Link>
                         </div>
@@ -125,9 +122,7 @@ const Intro3 = () => {
             <i className="fas fa-chevron-left"></i>
           </div>
         </div>
-        <div
-          ref={paginationRef}
-          className="swiper-pagination top botm custom-font"></div>
+        <div ref={paginationRef} className="swiper-pagination top botm custom-font"></div>
       </div>
     </header>
   );

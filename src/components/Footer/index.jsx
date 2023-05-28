@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 const Footer = ({ classText }) => {
+  const { t } = useTranslation("common");
   return (
     <footer className={`${classText ? classText : ""}`}>
       <div className="container">
@@ -10,25 +12,21 @@ const Footer = ({ classText }) => {
           <div className="col-lg-4">
             <div className="item md-mb50">
               <div className="title">
-                <h5>Contact Us</h5>
+                <h5>{t("layout.footer.title")}</h5>
               </div>
               <ul>
                 <li>
                   <span className="icon pe-7s-map-marker"></span>
                   <div className="cont">
-                    <h6>Office Address</h6>
-                    <p>
-                      {" "}
-                      4-4-1 4F, Twin Ichinohashi No. 2 building, Azabujuban,
-                      Minato-ku, Tokyo
-                    </p>
+                    <h6>{t("layout.footer.locationTitle")}</h6>
+                    <p> {t("layout.footer.location")}</p>
                   </div>
                 </li>
                 <li>
                   <span className="icon pe-7s-mail"></span>
                   <div className="cont">
-                    <h6>Email Us</h6>
-                    <p>info@kanroku.tokyo</p>
+                    <h6>{t("layout.footer.emailTitle")}</h6>
+                    <p>{t("layout.footer.email")}</p>
                   </div>
                 </li>
               </ul>
@@ -62,7 +60,7 @@ const Footer = ({ classText }) => {
                 </Link> */}
               </div>
               <div className="copy-right">
-                <p>©2023, KANROKU</p>
+                <p>{t("layout.footer.copyright")}</p>
               </div>
             </div>
           </div>

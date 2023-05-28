@@ -256,3 +256,27 @@ body.hideX .pace {
   height: 100%;
   border: 0;
 }
+
+.locales {
+  display: flex;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+.locales li {
+  font-size: 13px;
+  font-weight: 400;
+  list-style: none;
+  color: #fff;
+}
+
+.locales li::after {
+  content: "/";
+  position: relative;
+  margin: 0 8px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.locales li:last-of-type:after {
+  display: none;
+}
