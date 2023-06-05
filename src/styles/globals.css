@@ -280,3 +280,21 @@ body.hideX .pace {
 .locales li:last-of-type:after {
   display: none;
 }
+
+.tags-section li {
+  font-size: 14px;
+  font-weight: 500;
+  color: #b19777;
+}
+
+@media (max-width: 991px) {
+  .posts .row {
+    margin: 0;
+  }
+
+  .tags-section {
+    display: flex;
+    column-gap: 20px;
+    margin-bottom: 1.5rem;
+  }
+}

@@ -210,6 +210,23 @@
       { "id": 1, "name": "home", "url": "/" },
       { "id": 2, "name": "blogs", "url": "/blogs" }
     ],
+    "tags": [
+      {
+        "id": 1,
+        "name": "WordPress",
+        "link": "#"
+      },
+      {
+        "id": 2,
+        "name": "Themeforest",
+        "link": "#"
+      },
+      {
+        "id": 3,
+        "name": "Archo",
+        "link": "#"
+      }
+    ],
     "posts": [
       {
         "id": 1,
@@ -222,7 +239,7 @@
         "by": "ALEX SMITH",
         "date": "Aug 06 2022",
         "date2": ["Aug 2022", "06"],
-        "categories": ["WordPress", "Themeforest", "Archo"]
+        "categories": ["WordPress", "Themeforest"]
       },
       {
         "id": 2,
@@ -235,7 +252,7 @@
         "by": "ALEX SMITH",
         "date": "Aug 06 2022",
         "date2": ["Aug 2022", "06"],
-        "categories": ["WordPress", "Themeforest", "Archo"]
+        "categories": ["WordPress", "Archo"]
       },
       {
         "id": 3,
