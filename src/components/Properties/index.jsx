@@ -1,9 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+
 import thumparallaxUp from "../../common/thumparallaxUp";
 
 const Properties = () => {
+  const { t, ready } = useTranslation("common");
+
   React.useEffect(() => {
     setTimeout(() => {
       if (window.simpleParallax) thumparallaxUp();
@@ -24,11 +28,43 @@ const Properties = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="content pt-20">
                   <div className="row justify-content-center">
                     <div className="col-lg-10">
-                      <div className="cont">
+                      <div className="posts row">
+                        {ready &&
+                          t("blogs.posts", { returnObjects: true, useSuspense: false }).map(
+                            (item) => (
+                              <div className="item mb-80 col-lg-6" key={item.id}>
+                                <div className="img">
+                                  <Link href="/blog-details">
+                                    <a>
+                                      <img src={item.image} alt="" className="thumparallax" />
+                                    </a>
+                                  </Link>
+                                </div>
+                                <div className="content">
+                                  <div className="cont">
+                                    <div className="tags">
+                                      {item.categories.map((category) => (
+                                        <Link href="#" key={category}>
+                                          <a>{category}</a>
+                                        </Link>
+                                      ))}
+                                    </div>
+
+                                    <h4 className="title">
+                                      <Link href={item.link}>{item.hardcodeTitle}</Link>
+                                    </h4>
+
+                                    <Link href={item.link}>
+                                      <a className="more">{item.buttonText}</a>
+                                    </Link>
+                                  </div>
+                                </div>
+                              </div>
+                            ),
+                          )}
                         {/* <h6>Strong market potential</h6>
 
                         <p>

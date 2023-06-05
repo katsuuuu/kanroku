@@ -1,8 +1,12 @@
 import React from "react";
-import Split from "../Split";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
-const NextProject = ({ t, ready }) => {
+import Split from "../Split";
+
+const NextProject = () => {
+  const { t, ready } = useTranslation("common");
+
   if (!ready) return null;
 
   return (

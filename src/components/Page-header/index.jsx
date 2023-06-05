@@ -1,9 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useTranslation } from "react-i18next";
 
-const PageHeader = ({ title, fullPath, image, ready }) => {
+const PageHeader = ({ title, fullPath, image }) => {
   const router = useRouter();
+
+  const { ready } = useTranslation("common");
   return (
     <header
       className="pages-header bg-img valign parallaxie"

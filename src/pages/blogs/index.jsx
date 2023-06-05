@@ -7,7 +7,7 @@ import PageHeader from "../../components/Page-header";
 import BlogsList from "../../components/Blogs-List";
 
 const Blogs = () => {
-  const { t, ready } = useTranslation("common");
+  const { t } = useTranslation("common");
 
   React.useEffect(() => {
     document.querySelector("body").classList.add("index3");
@@ -15,7 +15,6 @@ const Blogs = () => {
   return (
     <MainLayout>
       <PageHeader
-        ready={ready}
         title={t("blogs.title")}
         fullPath={t("blogs.paths", {
           returnObjects: true,

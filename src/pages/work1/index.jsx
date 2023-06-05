@@ -8,7 +8,7 @@ import MainLayout from "../../layouts/main";
 import { WorkTwoColumn } from "../../components/Work-Two-Column";
 
 const Work1 = () => {
-  const { t, ready } = useTranslation("common");
+  const { t } = useTranslation("common");
 
   React.useEffect(() => {
     document.querySelector("body").classList.add("index3");
@@ -24,8 +24,7 @@ const Work1 = () => {
         // title = "text",
         content={t("work1.content")}
       />
-      <WorkTwoColumn t={t} ready={ready} />
-      {/* <WorkTwoColumn /> */}
+      <WorkTwoColumn />
     </MainLayout>
   );
 };

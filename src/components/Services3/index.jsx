@@ -1,10 +1,11 @@
 import React from "react";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 import services3Data from "../../data/services3.json";
 
-const Services3 = ({ bigTitle, grid, t, ready }) => {
-  // if (!ready) return <div>Loading...</div>;
+const Services3 = ({ bigTitle, grid }) => {
+  const { t, ready } = useTranslation("common");
 
   return (
     <section

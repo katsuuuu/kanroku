@@ -62,8 +62,10 @@
 
 import React, { Fragment } from "react";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
-const ProjectIntro = ({ t }) => {
+const ProjectIntro = () => {
+  const { t } = useTranslation("common");
   return (
     <section className="intro-section section-padding">
       <div className="container">

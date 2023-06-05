@@ -1,8 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import appData from "../../data/app.json";
 
-const ContactWithMap = ({ t }) => {
-  console.log(t("contact.firstInput.placeholder"));
+const ContactWithMap = () => {
+  const { t } = useTranslation("common");
   return (
     <div className="container-fluid">
       <div className="row">

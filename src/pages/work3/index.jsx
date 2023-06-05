@@ -8,7 +8,7 @@ import WorkHeader from "../../components/Work-header";
 import WorkFourColumn from "../../components/Work-Four-Column";
 
 const Work3 = () => {
-  const { t, ready } = useTranslation("common");
+  const { t } = useTranslation("common");
 
   React.useEffect(() => {
     document.querySelector("body").classList.add("index3");
@@ -23,7 +23,7 @@ const Work3 = () => {
         }}
         content={t("work3.content")}
       />
-      <WorkFourColumn t={t} ready={ready} />
+      <WorkFourColumn />
     </MainLayout>
   );
 };

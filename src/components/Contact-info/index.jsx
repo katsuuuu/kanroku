@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-const ContactInfo = ({ t }) => {
+const ContactInfo = () => {
+  const { t } = useTranslation("common");
+
   return (
     <div className="info pt-80 pb-80">
       <div className="container">

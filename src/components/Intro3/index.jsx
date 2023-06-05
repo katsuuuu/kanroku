@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Split from "../Split";
 import Link from "next/link";
 import SwiperCore, { Navigation, Pagination, Parallax } from "swiper";
+import { useTranslation } from "react-i18next";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -12,7 +13,7 @@ import removeSlashFromPagination from "../../common/removeSlashFromPagination";
 
 SwiperCore.use([Navigation, Pagination, Parallax]);
 
-const Intro3 = ({ t, ready }) => {
+const Intro3 = () => {
   const [load, setLoad] = React.useState(true);
   React.useEffect(() => {
     setTimeout(() => {
@@ -22,6 +23,8 @@ const Intro3 = ({ t, ready }) => {
       setLoad(false);
     });
   }, []);
+
+  const { t } = useTranslation("common");
 
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);

@@ -21,14 +21,13 @@ const ProjectDetails = () => {
   return (
     <MainLayout>
       <PageHeader
-        ready={ready}
         title={t("project-details.title")}
         fullPath={t("project-details.paths", {
           returnObjects: true,
         })}
         image="/assets/img/portfolio/project1/bg.jpg"
       />
-      <ProjectIntro t={t} ready={ready} />
+      <ProjectIntro />
       {/* <ProjectIntro /> */}
       <section className="projdtal">
         <div className="justified-gallery">
@@ -62,7 +61,7 @@ const ProjectDetails = () => {
         </div>
       </section>
 
-      <NextProject t={t} ready={ready} />
+      <NextProject />
     </MainLayout>
   );
 };

@@ -1,9 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+
 import thumparallaxUp from "../../common/thumparallaxUp";
 
-const PostDetails = ({ t, ready }) => {
+const PostDetails = () => {
+  const { t, ready } = useTranslation("common");
+
   React.useEffect(() => {
     setTimeout(() => {
       if (window.simpleParallax) thumparallaxUp();

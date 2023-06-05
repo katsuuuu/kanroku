@@ -25,7 +25,6 @@ const About = () => {
         fullPath={t("about.paths", {
           returnObjects: true,
         })}
-        ready={ready}
       />
       {/* <AboutUs4 />
       <Services3 /> */}

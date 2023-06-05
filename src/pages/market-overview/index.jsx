@@ -17,13 +17,12 @@ const BlogDetails = () => {
   return (
     <LightLayout>
       <PageHeader
-        ready={ready}
         title={t("market-overview.title")}
         fullPath={t("market-overview.paths", {
           returnObjects: true,
         })}
       />
-      <PostDetails t={t} ready={ready} />
+      <PostDetails />
     </LightLayout>
   );
 };

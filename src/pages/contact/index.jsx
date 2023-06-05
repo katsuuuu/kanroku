@@ -9,18 +9,15 @@ import MainLayout from "../../layouts/main";
 import LightLayout from "../../layouts/light";
 
 const Contact = () => {
-  const { t, ready } = useTranslation("common");
+  const { t } = useTranslation("common");
 
   React.useEffect(() => {
     document.querySelector("body").classList.add("index3");
   }, []);
 
-  if (!ready) return null;
-
   return (
     <LightLayout>
       <PageHeader
-        ready={ready}
         title={t("contact.title")}
         fullPath={t("contact.paths", {
           returnObjects: true,
@@ -28,8 +25,8 @@ const Contact = () => {
         image="/assets/img/rocks.jpg"
       />
       <section className="contact">
-        <ContactInfo t={t} />
-        <ContactWithMap t={t} />
+        <ContactInfo />
+        <ContactWithMap />
       </section>
     </LightLayout>
   );

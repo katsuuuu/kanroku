@@ -17,18 +17,13 @@ import Works1 from "../../components/Works1";
 import LightLayout from "../../layouts/light";
 
 const Home3 = () => {
-  const router = useRouter();
-  const { t, ready } = useTranslation("common");
-
-  console.log("router", router);
-
   React.useEffect(() => {
     document.querySelector("body").classList.add("homepage");
   }, []);
   return (
     <LightLayout>
-      <Intro3 t={t} ready={ready} />
-      <Services3 t={t} ready={ready} />
+      <Intro3 />
+      <Services3 />
       {/* <Works1 /> */}
       <AboutUs2 />
       {/* <AfterBefore />
