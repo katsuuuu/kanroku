@@ -1,0 +1,596 @@
+{
+  "layout": {
+    "header": {
+      "lightLogo": "/assets/img/kanroku_yoko_white.png",
+      "darkLogo": "/assets/img/kanroku_yoko_nobg.png",
+      "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!.671230259337!2d2.3558151621751584!3d48.86295242559001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d877937b0f%3A0xb975fcfa192f84d4!2z2YXYqtit2YEg2KfZhNmE2YjZgdix!5e0!3m2!1sar!2seg!4v1642786626975!5m2!1sar!2seg",
+      "showLoading": true,
+      "menu": [
+        {
+          "id": 1,
+          "name": "Team",
+          "link": "/about"
+        },
+        {
+          "id": 2,
+          "name": "Market Overview",
+          "link": "/market-overview"
+        },
+        {
+          "id": 3,
+          "name": "Properties",
+          "link": "/properties"
+        },
+        {
+          "id": 4,
+          "name": "Contact",
+          "link": "/contact"
+        }
+      ]
+    },
+    "footer": {
+      "title": "Contact Us",
+      "locationTitle": "Office Address",
+      "location": "4-4-1 4F, Twin Ichinohashi No. 2 building, Azabujuban, Minato-ku, Tokyo",
+      "emailTitle": "Email Us",
+      "email": "info@kanroku.tokyo",
+      "copyright": "©2023, KANROKU"
+    }
+  },
+  "home": {
+    "slider": [
+      {
+        "id": 1,
+        "title": { "first": "Real Estate", "second": "in Japan" },
+        "content": "Choosing the correct real estate agent to purchase your home is one of the most important decisions you’ll make. Your home is a very personal, important, and valuable asset, and it can be an emotional and complicated endeavor to purchase it, especially in today’s challenging marketplace. Numerous questions and concerns will need to be addressed, and the advice and consultation that you receive can make a tremendous difference in the results.",
+        "image": "/assets/img/slid/n/japandi1.jpeg",
+        "buttonText": "Discover Work",
+        "buttonLink": "/properties"
+      },
+      {
+        "id": 2,
+        "title": { "first": "Inventment", "second": "" },
+        "content": "kanroku is truly a full-service brokerage, and  we are not just a real estate agent, Its a licensed real estate broker, as well as a licensed and practiced attorney and contractor in Japan. kanroku is truly a full-service brokerage, and  we are not just a real estate agent, Its a licensed real estate broker, as well as a licensed and practiced attorney and contractor in Japan.",
+        "image": "/assets/img/slid/n/japanese_home1.jpeg",
+        "buttonText": "Discover Work",
+        "buttonLink": "/properties"
+      }
+    ],
+    "services": {
+      "top": "How can we help?",
+      "title": "Our Services",
+      "mainHeader": {
+        "title": "Best Features.",
+        "text": "Services"
+      },
+      "list": [
+        {
+          "id": 1,
+          "image": "/assets/img/rocks.jpg",
+          "icon": "icon flaticon-computer",
+          "title": "Brokerage",
+          "content": "An excellent agent will make a proposal that is close to each customer. Since there are few companies in Japan that provide services with overseas investors in mind, we will strive to be a bridge between them.",
+          "buttonText": "Read More",
+          "buttonLink": "/market-overview"
+        },
+        {
+          "id": 2,
+          "image": "/assets/img/rocks.jpg",
+          "icon": "icon flaticon-plan",
+          "title": "Management business",
+          "content": "（sophisticated management）We provide condominium management by professional staff with high expertise. Utilizing our own condominium management information system, We propose optimal management services that match the current condition of the customer's condominium.",
+          "buttonText": "Read More",
+          "buttonLink": "/market-overview"
+        },
+        {
+          "id": 3,
+          "image": "/assets/img/rocks.jpg",
+          "icon": "icon flaticon-desk-lamp",
+          "title": "Extensive network",
+          "content": "Utilizing our network of personal connections unique to Japanese people, we carefully support everything from acquiring properties that are difficult to obtain information to consulting on borrowing from Japanese banks when purchasing real estate, and after that, from management to sales.",
+          "buttonText": "Read More",
+          "buttonLink": "/market-overview"
+        }
+      ]
+    },
+    "about": {
+      "title": {
+        "first": "Our Vision",
+        "second": ""
+      },
+      "image1": "/assets/img/two_nobg.png",
+      "image2": "/assets/img/japandi_1.jpeg",
+      "content": "Our vision is to position Japan as a major investment market and bring short and long term benefits to our clients. Through its deep expertise and extensive network, Kanroku provides valuable support to meet our customer needs.",
+
+      "exp": 21,
+      "list": [
+        {
+          "id": 1,
+          "name": "Extensive Network"
+        },
+        {
+          "id": 2,
+          "name": "Deep Expertise"
+        },
+        {
+          "id": 3,
+          "name": "Bilingual"
+        }
+      ],
+      "buttonText": "About Us",
+      "buttonLink": "/about"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "paths": [
+      { "id": 1, "name": "home", "url": "/home3" },
+      { "id": 2, "name": "about us", "url": "/about" }
+    ],
+    "team": {
+      "title": "Team",
+      "description": "We are an agent-type real estate brokerage company that gathers bilingual human resources and mediates mainly Japanese real estate to overseas investors.",
+      "slider": [
+        {
+          "id": 1,
+          "image": "/assets/img/team/7.jpg",
+          "facebook": "#",
+          "twitter": "#",
+          "behance": "#",
+          "linkedin": "https://www.linkedin.com/in/shiho-kawamoto-97921617a/?originalSubdomain=jp",
+          "username": "Shiho Kawamoto",
+          "usertitle": "CEO, Serial Entrepreneur, Board Member. Shiho Founded kanroku Inc. in November 2020."
+        },
+        {
+          "id": 2,
+          "image": "/assets/img/team/8.jpg",
+          "facebook": "#",
+          "twitter": "#",
+          "behance": "#",
+          "linkedin": "https://www.linkedin.com/in/%E5%AF%8C-%E3%82%88%E3%82%88-961081a8/?originalSubdomain=jp",
+          "username": "Yoyo Tomi",
+          "usertitle": "Co-Partner, Prior to joining Kanroku Inc. since 2023, Yoyo was at Operations division at Morgan Stanley."
+        },
+        {
+          "id": 3,
+          "image": "/assets/img/team/twoagents.jpg",
+          "facebook": "#",
+          "twitter": "#",
+          "behance": "#",
+          "linkedin": "#",
+          "username": "",
+          "usertitle": ""
+        }
+      ]
+    }
+  },
+  "market-overview": {
+    "title": "Market Overview",
+    "paths": [
+      { "id": 1, "name": "home", "url": "/" },
+      { "id": 2, "name": "Market Overview", "url": "/market-overview" }
+    ],
+    "post": {
+      "title": "Value Proposition",
+      "date": "2023/5/3",
+      "content": "<h6>Strong market potential</h6><p>The size of the real estate market in Japan is 44 trillion yen as a whole, of which 4.4 trillion yen is for brokerage alone. Even though it’s not small, there are few real estate agents in the market that specialize in foreign investors.</p><h6>Advantage in sales strategy</h6><p>By conducting sales activities in English and Chinese, we are able to overcome language barriers and make proposals that better fit the needs of our customers, achieving high customer satisfaction. In addition, we aim for rapid expansion by making full use of the personal connections and know-how that we have cultivated so far.</p><h6>Diversified culture</h6><p>In a male-dominated, conservative industry, the opposite concept of a bilingual female sales force becomes superiority and differentiation in the existing industry.</p>"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "paths": [
+      { "id": 1, "name": "home", "url": "/" },
+      { "id": 2, "name": "contact us", "url": "/contact" }
+    ],
+    "image": "/assets/img/rocks.jpg",
+    "emailTitle": "Email Us",
+    "email": "info@kanroku.tokyo",
+    "addressTitle": "Address",
+    "address": "4-4-1 4F, Twin Ichinohashi No. 2 building, Azabujuban, Minato-ku, Tokyo",
+    "firstInput": {
+      "name": "name",
+      "placeholder": "Name",
+      "required": true
+    },
+    "secondInput": {
+      "name": "email",
+      "placeholder": "Email",
+      "required": true
+    },
+    "thirdInput": {
+      "name": "message",
+      "placeholder": "Message",
+      "required": true
+    },
+    "button": "Send Message"
+  },
+  "blogs": {
+    "title": "Our Blogs",
+    "paths": [
+      { "id": 1, "name": "home", "url": "/" },
+      { "id": 2, "name": "blogs", "url": "/blogs" }
+    ],
+    "tags": [
+      {
+        "id": 1,
+        "name": "WordPress",
+        "link": "#"
+      },
+      {
+        "id": 2,
+        "name": "Themeforest",
+        "link": "#"
+      },
+      {
+        "id": 3,
+        "name": "Archo",
+        "link": "#"
+      }
+    ],
+    "posts": [
+      {
+        "id": 1,
+        "image": "/assets/img/blog/1.jpg",
+        "title": "In Good Taste: Mark Finlay Architects and Interiors",
+        "hardcodeTitle": "Build a Beautiful Blog With Ease",
+        "excerpt": "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing.",
+        "link": "/blog-details",
+        "buttonText": "Read More",
+        "by": "ALEX SMITH",
+        "date": "Aug 06 2022",
+        "date2": ["Aug 2022", "06"],
+        "categories": ["WordPress", "Themeforest"]
+      },
+      {
+        "id": 2,
+        "image": "/assets/img/blog/2.jpg",
+        "title": "Five Things You Should Know About Modern Furniture.",
+        "hardcodeTitle": "Build a Beautiful Blog With Ease",
+        "excerpt": "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing.",
+        "link": "/blog-details",
+        "buttonText": "Read More",
+        "by": "ALEX SMITH",
+        "date": "Aug 06 2022",
+        "date2": ["Aug 2022", "06"],
+        "categories": ["WordPress", "Archo"]
+      },
+      {
+        "id": 3,
+        "image": "/assets/img/blog/3.jpg",
+        "title": "What it's like to be an interior designer?",
+        "hardcodeTitle": "Build a Beautiful Blog With Ease",
+        "excerpt": "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing.",
+        "link": "/blog-details",
+        "buttonText": "Read More",
+        "by": "ALEX SMITH",
+        "date": "Aug 06 2022",
+        "date2": ["Aug 2022", "06"],
+        "categories": ["WordPress", "Themeforest", "Archo"]
+      }
+    ]
+  },
+  "project-details": {
+    "title": "Luxury Furniture",
+    "paths": [
+      { "id": 1, "name": "home", "url": "/" },
+      { "id": 2, "name": "portfolio", "url": "/work1" },
+      { "id": 3, "name": "project details", "url": "/project-details" }
+    ],
+    "image": "/assets/img/portfolio/project1/bg.jpg",
+    "intro": {
+      "title": "introduction",
+      "description": "We are a Creative Agency &amp; Startup Studio that provides Digital Products and Services turns to focus on client success. We specialize in user interface design, including front-end development which we consider to be an integral part.",
+      "list": [
+        { "id": 1, "title": "Client", "list": [{ "id": 1, "text": "Envato.com", "link": "#" }] },
+        { "id": 2, "title": "Date", "list": [{ "id": 1, "text": "6 August 2022" }] },
+        {
+          "id": 3,
+          "title": "Categories",
+          "list": [
+            { "id": 1, "text": "Web Design", "link": "#" },
+            { "id": 2, "text": ", WordPress", "link": "#" }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Tags",
+          "list": [
+            { "id": 1, "text": "Minimal", "link": "#" },
+            { "id": 2, "text": ", Modern", "link": "#" },
+            { "id": 2, "text": ", Design", "link": "#" }
+          ]
+        }
+      ]
+    },
+    "nextProject": {
+      "title": "Next Project",
+      "text": "<b> Luxury </b> Furniture"
+    }
+  },
+  "work1": {
+    "title": {
+      "first": "Architecture is a visual art,",
+      "second": "and the building speak for themeselves"
+    },
+    "content": "Architecture bibendum pharetra eleifend. Suspendisse vel volutpat purus, sit amet bibendum nisl. Cras mollis turpis a ipsum ultes, nec condimentum ipsum consequat. Mauris vitae consequat nibh, vitae interdum mi.",
+    "works": {
+      "title": "Works",
+      "filters": [
+        {
+          "id": 1,
+          "title": "All",
+          "filter": "*"
+        },
+        {
+          "id": 2,
+          "title": "Interior",
+          "filter": ".interior"
+        },
+        {
+          "id": 3,
+          "title": "Theaters",
+          "filter": ".theaters"
+        },
+        {
+          "id": 4,
+          "title": "Residential",
+          "filter": ".residential"
+        }
+      ],
+      "list": [
+        {
+          "id": 1,
+          "img": "/assets/img/works/2.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "theaters",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 2,
+          "img": "/assets/img/works/1.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "residential interior",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 3,
+          "img": "/assets/img/works/5.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "interior",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 4,
+          "img": "/assets/img/works/3.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "residential",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 5,
+          "img": "/assets/img/works/4.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "theaters",
+          "categories": ["Architecture", "Modern"]
+        }
+      ]
+    }
+  },
+  "work2": {
+    "title": {
+      "first": "Architecture is a visual art,",
+      "second": "and the building speak for themeselves"
+    },
+    "content": "Architecture bibendum pharetra eleifend. Suspendisse vel volutpat purus, sit amet bibendum nisl. Cras mollis turpis a ipsum ultes, nec condimentum ipsum consequat. Mauris vitae consequat nibh, vitae interdum mi.",
+    "works": {
+      "title": "Works",
+      "filters": [
+        {
+          "id": 1,
+          "title": "All",
+          "filter": "*"
+        },
+        {
+          "id": 2,
+          "title": "Interior",
+          "filter": ".interior"
+        },
+        {
+          "id": 3,
+          "title": "Theaters",
+          "filter": ".theaters"
+        },
+        {
+          "id": 4,
+          "title": "Residential",
+          "filter": ".residential"
+        }
+      ],
+      "list": [
+        {
+          "id": 1,
+          "img": "/assets/img/works/col/2.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "theaters",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 2,
+          "img": "/assets/img/works/col/1.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "residential interior",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 3,
+          "img": "/assets/img/works/col/5.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "interior",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 4,
+          "img": "/assets/img/works/col/3.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "residential",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 5,
+          "img": "/assets/img/works/col/4.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "theaters",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 6,
+          "img": "/assets/img/works/col/6.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "residential",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 7,
+          "img": "/assets/img/works/col/1.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "residential interior",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 8,
+          "img": "/assets/img/works/col/5.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "interior",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 9,
+          "img": "/assets/img/works/col/3.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "residential",
+          "categories": ["Architecture", "Modern"]
+        }
+      ]
+    }
+  },
+  "work3": {
+    "title": {
+      "first": "Architecture is a visual art,",
+      "second": "and the building speak for themeselves"
+    },
+    "content": "Architecture bibendum pharetra eleifend. Suspendisse vel volutpat purus, sit amet bibendum nisl. Cras mollis turpis a ipsum ultes, nec condimentum ipsum consequat. Mauris vitae consequat nibh, vitae interdum mi.",
+    "works": {
+      "title": "Works",
+      "filters": [
+        {
+          "id": 1,
+          "title": "All",
+          "filter": "*"
+        },
+        {
+          "id": 2,
+          "title": "Interior",
+          "filter": ".interior"
+        },
+        {
+          "id": 3,
+          "title": "Theaters",
+          "filter": ".theaters"
+        },
+        {
+          "id": 4,
+          "title": "Residential",
+          "filter": ".residential"
+        }
+      ],
+      "list": [
+        {
+          "id": 1,
+          "img": "/assets/img/works/col/01.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "theaters",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 2,
+          "img": "/assets/img/works/col/02.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "residential interior",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 3,
+          "img": "/assets/img/works/col/03.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "interior",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 4,
+          "img": "/assets/img/works/col/04.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "residential",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 5,
+          "img": "/assets/img/works/col/05.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "theaters",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 6,
+          "img": "/assets/img/works/col/06.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "residential",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 7,
+          "img": "/assets/img/works/col/07.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "residential interior",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 8,
+          "img": "/assets/img/works/col/08.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "interior",
+          "categories": ["Architecture", "Modern"]
+        },
+        {
+          "id": 9,
+          "img": "/assets/img/works/col/09.jpg",
+          "title": "Modern Townhouse",
+          "link": "/project-details",
+          "className": "theaters",
+          "categories": ["Architecture", "Modern"]
+        }
+      ]
+    }
+  }
+}

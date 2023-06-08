@@ -1,8 +1,14 @@
 import React from "react";
-import Split from "../Split";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+
+import Split from "../Split";
 
 const NextProject = () => {
+  const { t, ready } = useTranslation("common");
+
+  if (!ready) return null;
+
   return (
     <section className="call-action nogif next">
       <div className="container">
@@ -12,11 +18,8 @@ const NextProject = () => {
               <Link href="/project-details">
                 <a>
                   <Split>
-                    <h6
-                      className="wow txt words chars splitting"
-                      data-splitting
-                    >
-                      Next Project
+                    <h6 className="wow txt words chars splitting" data-splitting>
+                      {t("project-details.nextProject.title")}
                     </h6>
                   </Split>
 
@@ -24,9 +27,14 @@ const NextProject = () => {
                     <h2
                       className="wow txt words chars splitting"
                       data-splitting
-                    >
-                      <b> Luxury </b> Furniture
-                    </h2>
+                      dangerouslySetInnerHTML={{
+                        __html: t("project-details.nextProject.title", {
+                          useSuspense: false,
+                        }),
+                      }}
+                    />
+                    {/* <b> Luxury </b> Furniture
+                    </h2> */}
                   </Split>
                 </a>
               </Link>
@@ -34,10 +42,7 @@ const NextProject = () => {
           </div>
         </div>
       </div>
-      <div
-        className="nxt-img bg-img"
-        data-background="img/portfolio/project1/bg.jpg"
-      ></div>
+      <div className="nxt-img bg-img" data-background="img/portfolio/project1/bg.jpg"></div>
     </section>
   );
 };

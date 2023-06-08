@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Split from "../Split";
 import Link from "next/link";
 import SwiperCore, { Navigation, Pagination, Parallax } from "swiper";
+import { useTranslation } from "react-i18next";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -22,6 +23,8 @@ const Intro3 = () => {
       setLoad(false);
     });
   }, []);
+
+  const { t } = useTranslation("common");
 
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
@@ -54,7 +57,7 @@ const Intro3 = () => {
                 for (var i = 0; i < swiper.slides.length; i++) {
                   swiper.slides[i].childNodes[0].setAttribute(
                     "data-swiper-parallax",
-                    0.75 * swiper.width
+                    0.75 * swiper.width,
                   );
                 }
 
@@ -74,7 +77,8 @@ const Intro3 = () => {
             }}
             className="swiper-wrapper"
             slidesPerView={1}>
-            {intro3Data.map((slide) => (
+            {/* {intro3Data.map((slide) => ( */}
+            {t("home.slider", { returnObjects: true }).map((slide) => (
               <SwiperSlide key={slide.id} className="swiper-slide">
                 <div
                   className="bg-img valign"
@@ -85,9 +89,7 @@ const Intro3 = () => {
                       <div className="col-lg-7 col-md-9">
                         <div className="caption center">
                           <Split>
-                            <h1
-                              data-splitting
-                              className="playfont words chars splitting">
+                            <h1 data-splitting className="playfont words chars splitting">
                               <Link href="#">
                                 <a>
                                   {slide.title.first} <br />
@@ -96,12 +98,10 @@ const Intro3 = () => {
                               </Link>
                             </h1>
                           </Split>
-                          {slide?.content && (
-                            <p className="mt-10">{slide.content}</p>
-                          )}
-                          <Link href="/properties">
+                          {slide?.content && <p className="mt-10">{slide.content}</p>}
+                          <Link href={slide.buttonLink}>
                             <a className="btn-curve btn-color mt-20">
-                              <span>Discover Work</span>
+                              <span>{slide.buttonText}</span>
                             </a>
                           </Link>
                         </div>
@@ -125,9 +125,7 @@ const Intro3 = () => {
             <i className="fas fa-chevron-left"></i>
           </div>
         </div>
-        <div
-          ref={paginationRef}
-          className="swiper-pagination top botm custom-font"></div>
+        <div ref={paginationRef} className="swiper-pagination top botm custom-font"></div>
       </div>
     </header>
   );

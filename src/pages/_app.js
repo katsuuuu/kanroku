@@ -1,6 +1,8 @@
 import React from "react";
 import Script from "next/script";
 import Head from "next/head";
+import { appWithTranslation } from "next-i18next";
+
 import LoadingScreen from "../components/Loading-Screen/loading-screen";
 import "../styles/globals.css";
 import Cursor from "../components/Cursor";
@@ -11,10 +13,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Kanroku</title>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       </Head>
 
       <Cursor />
@@ -28,9 +27,7 @@ function MyApp({ Component, pageProps }) {
         strategy="beforeInteractive"
         src="/assets/js/splitting.min.js"></Script>
 
-      <Script
-        id="simpleParallax"
-        src="/assets/js/simpleParallax.min.js"></Script>
+      <Script id="simpleParallax" src="/assets/js/simpleParallax.min.js"></Script>
       <Script id="isotope" src="/assets/js/isotope.pkgd.min.js"></Script>
 
       <Script src="/assets/js/main.js" id="init" strategy="lazyOnload"></Script>
@@ -38,4 +35,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

@@ -1,15 +1,22 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Blog1Data from "../../data/blog1.json";
+import { useTranslation } from "react-i18next";
 import Link from "next/link";
+
+import Blog1Data from "../../data/blog1.json";
 import thumparallaxUp from "../../common/thumparallaxUp";
 
 const BlogsList = () => {
+  const { t, ready } = useTranslation("common");
+
   React.useEffect(() => {
     setTimeout(() => {
       if (window.simpleParallax) thumparallaxUp();
     }, 1000);
   }, []);
+
+  if (!ready) return <div>Loading...</div>;
+
   return (
     <>
       <section className="blog-pg section-padding">
@@ -17,16 +24,12 @@ const BlogsList = () => {
           <div className="row">
             <div className="col-lg-10 offset-lg-1">
               <div className="posts">
-                {Blog1Data.map((item) => (
+                {t("blogs.posts", { returnObjects: true, useSuspense: false }).map((item) => (
                   <div className="item mb-80" key={item.id}>
                     <div className="img">
                       <Link href="/blog-details">
                         <a>
-                          <img
-                            src={item.image}
-                            alt=""
-                            className="thumparallax"
-                          />
+                          <img src={item.image} alt="" className="thumparallax" />
                         </a>
                       </Link>
                     </div>
@@ -43,22 +46,18 @@ const BlogsList = () => {
                       </div>
                       <div className="cont">
                         <div className="tags">
-                          <Link href="#">WordPress</Link>
-                          <Link href="#">Themeforest</Link>
-                          <Link href="#">Archo</Link>
+                          {item.categories.map((category) => (
+                            <Link href="#" key={category}>
+                              <a>{category}</a>
+                            </Link>
+                          ))}
                         </div>
                         <h4 className="title">
-                          <Link href="/blog-details">
-                            Build a Beautiful Blog With Ease
-                          </Link>
+                          <Link href={item.link}>{item.hardcodeTitle}</Link>
                         </h4>
-                        <p>
-                          Success is no accident. It is hard work, perseverance,
-                          learning, studying, sacrifice and most of all, love of
-                          what you are doing.
-                        </p>
-                        <Link href="/blog-details">
-                          <a className="more">Read More</a>
+                        <p>{item.excerpt}</p>
+                        <Link href={item.link}>
+                          <a className="more">{item.buttonText}</a>
                         </Link>
                       </div>
                     </div>
