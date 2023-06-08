@@ -46,7 +46,7 @@ export const WorkTwoColumn = () => {
 
             {t("work1.works.list", { returnObjects: true }).map((item) => {
               return (
-                <div className={`col-lg-6 items ${item.className}`}>
+                <div className={`col-lg-6 items ${item.className}`} key={item.id}>
                   <div className="item">
                     <div className="img">
                       <img src={item.img} alt={item.title} />
@@ -57,7 +57,7 @@ export const WorkTwoColumn = () => {
                       </h5>
 
                       {item.categories.map((category) => (
-                        <span>{category}</span>
+                        <span key={category}>{category}</span>
                       ))}
                     </div>
                   </div>

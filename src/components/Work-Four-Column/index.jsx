@@ -39,7 +39,7 @@ const WorkFourColumn = () => {
           <div className="row gallery">
             {t("work3.works.list", { returnObjects: true }).map((item) => {
               return (
-                <div className={`col-lg-3 col-md-6 items ${item.className}`}>
+                <div className={`col-lg-3 col-md-6 items ${item.className}`} key={item.id}>
                   <div className="item">
                     <div className="img">
                       <img src={item.img} alt={item.title} />
@@ -49,8 +49,8 @@ const WorkFourColumn = () => {
                         <Link href={item.link}>{item.title}</Link>
                       </h5>
 
-                      {item.categories.map((category) => (
-                        <span>{category}</span>
+                      {item.categories.map((category, index) => (
+                        <span key={`${category}_${index}`}>{category}</span>
                       ))}
                     </div>
                   </div>
