@@ -7,8 +7,12 @@ import { useRouter } from "next/router";
 
 import appData from "../../data/app.json";
 import getSiblings from "../../common/getSiblings";
+import { useEffect } from "react";
+
+import { Api } from "../../api";
 
 const Navbar = ({ navbarRef, logoRef, logoClass }) => {
+  const [test, setTest] = React.useState([]);
   const router = useRouter();
   const { t, ready } = useTranslation("common");
 
@@ -33,10 +37,32 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
     document.getElementById("navbarSupportedContent").classList.toggle("show-with-trans");
   };
 
+  useEffect(async () => {
+    const propertySlug = await Api.properties.getPropertyId(router.query.slug, router.locale);
+
+    const getPropertyId = await Api.properties.getPropertiesById(
+      propertySlug.properties.data[0].attributes.PropertyId,
+      // router.locale,
+      "all",
+    );
+
+    setTest(getPropertyId);
+  }, [router]);
+
   const handleLocaleChange = (locale) => {
-    router.push(router.route, router.asPath, {
-      locale,
-    });
+    if (router.route === "/properties/[slug]") {
+      test.properties.data.map((el) => {
+        if (el.attributes.locale === locale) {
+          router.push(`/properties/${el.attributes.Slug}`, `/properties/${el.attributes.Slug}`, {
+            locale,
+          });
+        }
+      });
+    } else {
+      router.push(router.route, router.asPath, {
+        locale,
+      });
+    }
   };
 
   if (!ready) return <div>Loading...</div>;
@@ -128,7 +154,7 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
             </ul>
 
             <ul className="locales">
-              {router.locales.map((locale, index) => (
+              {router.locales.map((locale) => (
                 <li onClick={() => handleLocaleChange(locale)} key={locale}>
                   {locale}
                 </li>

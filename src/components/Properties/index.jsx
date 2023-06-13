@@ -10,7 +10,10 @@ const Properties = ({ data, categories }) => {
   // const [posts, setPosts] = useState(t("blogs.posts", { returnObjects: true, useSuspense: false }));
   const [posts, setPosts] = useState(data?.properties.data);
 
+  const properties = data?.properties.data.slice(0);
+
   console.log("posts", posts);
+  console.log("properties", properties);
 
   React.useEffect(() => {
     setTimeout(() => {
@@ -24,25 +27,23 @@ const Properties = ({ data, categories }) => {
 
   const handleCategory = (category) => {
     console.log("category", category);
-    // setPosts(
-    //   // t("blogs.posts", { returnObjects: true, useSuspense: false }).filter((item) =>
-    //   //   item.categories.includes(category),
-    //   // ),
-    //   data?.properties.data.filter((item) =>
-    //     item.attributes.categories.data.includes({ attributes: { Slug: category } }),
-    //   ),
-    // );
-    setPosts(
-      data?.properties.data.filter((item) => {
-        console.log("item", item);
 
-        return item.attributes.categories.data.filter((category) => {
-          return category.attributes.Slug === category;
-        });
-      }),
-    );
+    let filtered = [];
+
+    properties.map((item) => {
+      console.log("item", item);
+      return item.attributes.categories.data.filter((cat) => {
+        console.log("category", cat.attributes.Slug === category);
+        if (cat.attributes.Slug === category) {
+          filtered.push(item);
+        }
+      });
+    });
+
+    console.log("filtered", filtered);
+
+    setPosts(filtered);
   };
-
   return (
     <>
       <section className="blog-pg single section-padding">

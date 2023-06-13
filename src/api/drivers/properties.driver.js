@@ -57,6 +57,7 @@ export const properties = {
                 Avatar
               }
               Body
+              PropertyId
               categories {
                 data {
                   attributes {
@@ -72,5 +73,39 @@ export const properties = {
     `;
 
     return client.request(query, { slug, locale });
+  },
+
+  getPropertyId: (slug, locale) => {
+    const query = gql`
+      query Property($slug: String, $locale: I18NLocaleCode) {
+        properties(filters: { Slug: { eq: $slug } }, locale: $locale) {
+          data {
+            attributes {
+              PropertyId
+            }
+          }
+        }
+      }
+    `;
+
+    return client.request(query, { slug, locale });
+  },
+
+  getPropertiesById: (id, locale) => {
+    const query = gql`
+      query Property($id: String, $locale: I18NLocaleCode) {
+        properties(filters: { PropertyId: { eq: $id } }, locale: $locale) {
+          data {
+            attributes {
+              locale
+              Slug
+              PropertyId
+            }
+          }
+        }
+      }
+    `;
+
+    return client.request(query, { id, locale });
   },
 };
