@@ -592,5 +592,8 @@
         }
       ]
     }
+  },
+  "properties": {
+    "title": "Properties"
   }
 }

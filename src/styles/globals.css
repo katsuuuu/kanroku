@@ -298,3 +298,73 @@ body.hideX .pace {
     margin-bottom: 1.5rem;
   }
 }
+
+@media (max-width: 767px) {
+  .property-wrapper {
+    padding: 80px 12px 40px 12px;
+  }
+
+  .property-heading {
+    padding-top: 20px;
+  }
+
+  .property-heading h1 {
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .property-wrapper {
+    padding: 40px 0 80px 0px;
+  }
+
+  .property-heading {
+    padding-top: 32px;
+    padding-bottom: 8px;
+  }
+
+  .property-heading h1 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+}
+
+.property-categories {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  column-gap: 12px;
+}
+
+.property-categories span {
+  font-size: 14px;
+  /* color: gray; */
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  /* font-weight: 500;
+  color: #b19777; */
+}
+
+.property-author__section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  column-gap: 12px;
+  text-align: center;
+}
+
+.property-author__section h5 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.property-author__section p {
+  font-size: 16px;
+}

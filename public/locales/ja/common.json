@@ -575,5 +575,8 @@
         }
       ]
     }
+  },
+  "properties": {
+    "title": "Properties"
   }
 }

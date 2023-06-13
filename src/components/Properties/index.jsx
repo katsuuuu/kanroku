@@ -1,13 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
 import thumparallaxUp from "../../common/thumparallaxUp";
 
-const Properties = () => {
+const Properties = ({ data, categories }) => {
   const { t, ready } = useTranslation("common");
-  const [posts, setPosts] = useState(t("blogs.posts", { returnObjects: true, useSuspense: false }));
+  // const [posts, setPosts] = useState(t("blogs.posts", { returnObjects: true, useSuspense: false }));
+  const [posts, setPosts] = useState(data?.properties.data);
+
+  console.log("posts", posts);
 
   React.useEffect(() => {
     setTimeout(() => {
@@ -15,11 +18,28 @@ const Properties = () => {
     }, 1000);
   }, []);
 
+  useEffect(() => {
+    setPosts(data?.properties.data);
+  }, [data]);
+
   const handleCategory = (category) => {
+    console.log("category", category);
+    // setPosts(
+    //   // t("blogs.posts", { returnObjects: true, useSuspense: false }).filter((item) =>
+    //   //   item.categories.includes(category),
+    //   // ),
+    //   data?.properties.data.filter((item) =>
+    //     item.attributes.categories.data.includes({ attributes: { Slug: category } }),
+    //   ),
+    // );
     setPosts(
-      t("blogs.posts", { returnObjects: true, useSuspense: false }).filter((item) =>
-        item.categories.includes(category),
-      ),
+      data?.properties.data.filter((item) => {
+        console.log("item", item);
+
+        return item.attributes.categories.data.filter((category) => {
+          return category.attributes.Slug === category;
+        });
+      }),
     );
   };
 
@@ -42,47 +62,56 @@ const Properties = () => {
                   <div className="flex-column-reverse flex-lg-row d-flex justify-content-between m-0">
                     <div className="col-lg-10 p-0">
                       <div className="posts row m-0">
-                        {ready &&
-                          posts.map((item) => (
-                            <div className="item mb-80 col-lg-6" key={item.id}>
-                              <div className="img">
-                                <Link href="/blog-details">
-                                  <a>
-                                    <img src={item.image} alt="" className="thumparallax" />
-                                  </a>
+                        {/* {ready && */}
+                        {posts.map((item) => (
+                          <div className="item mb-80 col-lg-6" key={item.id}>
+                            <div className="img">
+                              <Link href={`/properties/${item.attributes.Slug}`}>
+                                <a>
+                                  <img
+                                    src={item.attributes.Image}
+                                    alt=""
+                                    className="thumparallax"
+                                  />
+                                </a>
+                              </Link>
+                            </div>
+                            <div className="content">
+                              <div className="cont">
+                                <div className="tags">
+                                  {item.attributes.categories.data.map(({ attributes }) => (
+                                    <Link href={`/${attributes.Slug}`} key={attributes.Slug}>
+                                      <a>{attributes.Title}</a>
+                                    </Link>
+                                  ))}
+                                </div>
+
+                                <h4 className="title">
+                                  <Link href={`/properties/${item.attributes.Slug}`}>
+                                    {item.attributes.Title}
+                                  </Link>
+                                </h4>
+
+                                <Link href={`/properties/${item.attributes.Slug}`}>
+                                  <a className="more">{item.attributes.ButtonText}</a>
                                 </Link>
                               </div>
-                              <div className="content">
-                                <div className="cont">
-                                  <div className="tags">
-                                    {item.categories.map((category) => (
-                                      <Link href="#" key={category}>
-                                        <a>{category}</a>
-                                      </Link>
-                                    ))}
-                                  </div>
-
-                                  <h4 className="title">
-                                    <Link href={item.link}>{item.hardcodeTitle}</Link>
-                                  </h4>
-
-                                  <Link href={item.link}>
-                                    <a className="more">{item.buttonText}</a>
-                                  </Link>
-                                </div>
-                              </div>
                             </div>
-                          ))}
+                          </div>
+                        ))}
                       </div>
                     </div>
 
                     <ul className="tags-section col-lg-2 col-xl-1 flex-wrap">
-                      {ready &&
-                        t("blogs.tags", { returnObjects: true, useSuspense: false }).map((item) => (
-                          <li onClick={() => handleCategory(item.name)} key={item.id}>
-                            {item.name}
+                      {/* {ready && */}
+                      {
+                        // t("blogs.tags", { returnObjects: true, useSuspense: false }).map((item) => (
+                        categories.categories.data.map(({ attributes }) => (
+                          <li onClick={() => handleCategory(attributes.Slug)} key={attributes.Slug}>
+                            {attributes.Title}
                           </li>
-                        ))}
+                        ))
+                      }
                     </ul>
                   </div>
                 </div>
