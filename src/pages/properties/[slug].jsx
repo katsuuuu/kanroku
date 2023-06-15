@@ -18,8 +18,6 @@ const Property = ({ data }) => {
 
   const property = data.properties.data[0].attributes;
 
-  console.log("property", property);
-
   return (
     <LightLayout>
       <PageHeader
