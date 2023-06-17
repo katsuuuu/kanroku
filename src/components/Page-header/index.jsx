@@ -3,10 +3,17 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 
-const PageHeader = ({ title, fullPath, image }) => {
+const PageHeader = ({ title, fullPath, image, property, isPostPage = false }) => {
   const router = useRouter();
 
   const { ready } = useTranslation("common");
+
+  const date = new Date(property?.publishedAt).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   return (
     <header
       className="pages-header bg-img valign parallaxie"
@@ -31,6 +38,28 @@ const PageHeader = ({ title, fullPath, image }) => {
                   ))}
               </div>
             </div>
+
+            {isPostPage && property && (
+              <section className="container">
+                <div className="property-categories">
+                  {property.categories.data.map(({ attributes }) => (
+                    <span key={attributes.Slug}>{attributes.Title}</span>
+                  ))}
+                </div>
+
+                <div className="property-author__section">
+                  {property.Author?.Avatar && (
+                    <img src={property.Author?.Avatar} alt={property.Author.Name} />
+                  )}
+
+                  <section>
+                    <h5>{property.Author.Name}</h5>
+
+                    <p>{date}</p>
+                  </section>
+                </div>
+              </section>
+            )}
           </div>
         </div>
       </div>
