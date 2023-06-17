@@ -89,7 +89,9 @@ const ProjectIntro = () => {
                   <p>
                     {item.list.map((listItem) =>
                       listItem.link ? (
-                        <Link href={listItem.link}>{listItem.text}</Link>
+                        <Link key={listItem.id} href={listItem.link}>
+                          {listItem.text}
+                        </Link>
                       ) : (
                         <Fragment key={listItem.id}>{listItem.text}</Fragment>
                       ),

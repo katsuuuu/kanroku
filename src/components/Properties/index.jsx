@@ -12,9 +12,6 @@ const Properties = ({ data, categories }) => {
 
   const properties = data?.properties.data.slice(0);
 
-  console.log("posts", posts);
-  console.log("properties", properties);
-
   React.useEffect(() => {
     setTimeout(() => {
       if (window.simpleParallax) thumparallaxUp();
@@ -26,21 +23,15 @@ const Properties = ({ data, categories }) => {
   }, [data]);
 
   const handleCategory = (category) => {
-    console.log("category", category);
-
     let filtered = [];
 
     properties.map((item) => {
-      console.log("item", item);
       return item.attributes.categories.data.filter((cat) => {
-        console.log("category", cat.attributes.Slug === category);
         if (cat.attributes.Slug === category) {
           filtered.push(item);
         }
       });
     });
-
-    console.log("filtered", filtered);
 
     setPosts(filtered);
   };

@@ -37,6 +37,7 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
     document.getElementById("navbarSupportedContent").classList.toggle("show-with-trans");
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
     const propertySlug = await Api.properties.getPropertyId(router.query.slug, router.locale);
 
