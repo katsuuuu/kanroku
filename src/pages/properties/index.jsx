@@ -20,26 +20,32 @@ const BlogDetails = ({ data, categories }) => {
 
   const { t, ready } = useTranslation("common");
 
-  const router = useRouter();
-
   const handleLogin = () => {
     if (
       username === process.env.NEXT_PUBLIC_USERNAME &&
       password === process.env.NEXT_PUBLIC_PASSWORD
     ) {
       setIsVisible(false);
-      // localStorage.setItem("isLoggedIn", true);
-      setIsLogged(localStorage.setItem("isLoggedIn", true) || true);
+      localStorage.setItem("isLoggedIn", true);
+      // setIsLogged(localStorage.setItem("isLoggedIn", true) || true);
     } else {
       setIsVisible(true);
       setError("Invalid credentials");
-      // localStorage.setItem("isLoggedIn", false);
-      setIsLogged(localStorage.setItem("isLoggedIn", false) || false);
+      localStorage.setItem("isLoggedIn", false);
+      // setIsLogged(localStorage.setItem("isLoggedIn", false) || false);
     }
   };
 
+  let isLoggedIn = false;
+
+  if (typeof window !== "undefined") {
+    isLoggedIn = localStorage.getItem("isLoggedIn") || false;
+  }
+
   useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    // const isLoggedIn = localStorage.getItem("isLoggedIn") || false;
+    console.log("isLoggedIn useEff", isLoggedIn);
+    setIsLogged(Boolean(isLoggedIn === "true" || isLoggedIn));
     setIsVisible(isLoggedIn === "false" || !isLoggedIn ? true : false);
 
     // if (isLoggedIn === "false" || !isLoggedIn) {
@@ -59,9 +65,8 @@ const BlogDetails = ({ data, categories }) => {
       // document.querySelector("body").style.alignItems = "center";
       document.querySelector("body").classList.remove("properties-hidden");
     }
-  }, [isLogged]);
+  }, [isLogged, isLoggedIn]);
 
-  console.log("isVisible", isVisible);
   console.log("isLogged", isLogged);
 
   return (
@@ -79,7 +84,7 @@ const BlogDetails = ({ data, categories }) => {
 
       <section
         className={clsx("login-form__wrapper", {
-          "login-form__wrapper--visible": isVisible,
+          "login-form__wrapper--visible": !isLogged,
         })}>
         <div className="col-11 col-md-7 col-lg-5 col-xl-4 login-form">
           <input

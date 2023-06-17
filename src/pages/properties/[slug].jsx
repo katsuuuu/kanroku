@@ -12,8 +12,6 @@ import { Api } from "../../api";
 const Property = ({ data }) => {
   const { t, ready } = useTranslation("common");
 
-  console.log("data", data);
-
   if (!data) return null;
 
   const property = data.properties.data[0].attributes;
@@ -34,7 +32,7 @@ const Property = ({ data }) => {
 
       <section className="container property-wrapper">
         <section className="content__section">
-          <ReactMarkdown children={property.Body} />
+          <ReactMarkdown>{property.Body}</ReactMarkdown>
         </section>
       </section>
     </LightLayout>
