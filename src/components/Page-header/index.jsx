@@ -41,12 +41,6 @@ const PageHeader = ({ title, fullPath, image, property, isPostPage = false }) =>
 
             {isPostPage && property && (
               <section className="container">
-                <div className="property-categories">
-                  {property.categories.data.map(({ attributes }) => (
-                    <span key={attributes.Slug}>{attributes.Title}</span>
-                  ))}
-                </div>
-
                 <div className="property-author__section">
                   {property.Author?.Avatar && (
                     <img src={property.Author?.Avatar} alt={property.Author.Name} />

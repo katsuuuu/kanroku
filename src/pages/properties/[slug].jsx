@@ -31,6 +31,12 @@ const Property = ({ data }) => {
       />
 
       <section className="container property-wrapper">
+        <div className="property-categories">
+          {property.categories.data.map(({ attributes }) => (
+            <span key={attributes.Slug}>{attributes.Title}</span>
+          ))}
+        </div>
+
         <section className="content__section">
           <ReactMarkdown>{property.Body}</ReactMarkdown>
         </section>
