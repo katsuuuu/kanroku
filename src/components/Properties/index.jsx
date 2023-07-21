@@ -42,14 +42,14 @@ const Properties = ({ data, categories }) => {
           <div className="row justify-content-center m-0">
             <div className="">
               <div className="post">
-                <div className="title-head">
+                {/* <div className="title-head">
                   <h2>Properties</h2>
                   <div className="info">
                     <p>
                       <a>Upon a request</a>
                     </p>
                   </div>
-                </div>
+                </div> */}
                 <div className="content pt-20">
                   <div className="flex-column-reverse flex-lg-row d-flex justify-content-between m-0">
                     <div className="col-lg-10 p-0">
@@ -58,7 +58,8 @@ const Properties = ({ data, categories }) => {
                         {posts.map((item) => (
                           <div className="item mb-80 col-lg-6" key={item.id}>
                             <div className="img">
-                              <Link href={`/properties/${item.attributes.Slug}`}>
+                              <Link
+                                href={`/properties/${item.attributes.Slug}`}>
                                 <a>
                                   <img
                                     src={item.attributes.Image}
@@ -71,21 +72,29 @@ const Properties = ({ data, categories }) => {
                             <div className="content">
                               <div className="cont">
                                 <div className="tags">
-                                  {item.attributes.categories.data.map(({ attributes }) => (
-                                    <Link href={`/${attributes.Slug}`} key={attributes.Slug}>
-                                      <a>{attributes.Title}</a>
-                                    </Link>
-                                  ))}
+                                  {item.attributes.categories.data.map(
+                                    ({ attributes }) => (
+                                      <Link
+                                        href={`/${attributes.Slug}`}
+                                        key={attributes.Slug}>
+                                        <a>{attributes.Title}</a>
+                                      </Link>
+                                    )
+                                  )}
                                 </div>
 
                                 <h4 className="title">
-                                  <Link href={`/properties/${item.attributes.Slug}`}>
+                                  <Link
+                                    href={`/properties/${item.attributes.Slug}`}>
                                     {item.attributes.Title}
                                   </Link>
                                 </h4>
 
-                                <Link href={`/properties/${item.attributes.Slug}`}>
-                                  <a className="more">{item.attributes.ButtonText}</a>
+                                <Link
+                                  href={`/properties/${item.attributes.Slug}`}>
+                                  <a className="more">
+                                    {item.attributes.ButtonText}
+                                  </a>
                                 </Link>
                               </div>
                             </div>
@@ -99,7 +108,9 @@ const Properties = ({ data, categories }) => {
                       {
                         // t("blogs.tags", { returnObjects: true, useSuspense: false }).map((item) => (
                         categories.categories.data.map(({ attributes }) => (
-                          <li onClick={() => handleCategory(attributes.Slug)} key={attributes.Slug}>
+                          <li
+                            onClick={() => handleCategory(attributes.Slug)}
+                            key={attributes.Slug}>
                             {attributes.Title}
                           </li>
                         ))
