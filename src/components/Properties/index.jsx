@@ -33,10 +33,7 @@ const Properties = ({ data, categories }) => {
 
     setPosts(filtered);
   };
-
-  console.log("posts", posts);
-  console.log("categories", categories);
-  console.log("data", data);
+  
   return (
     <>
       <section className="blog-pg single section-padding">
