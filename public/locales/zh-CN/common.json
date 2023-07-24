@@ -8,31 +8,31 @@
       "menu": [
         {
           "id": 1,
-          "name": "Team",
+          "name": "我们的团队",
           "link": "/about"
         },
         {
           "id": 2,
-          "name": "Market Overview",
+          "name": "市场概览",
           "link": "/market-overview"
         },
         {
           "id": 3,
-          "name": "Properties",
+          "name": "房地产",
           "link": "/properties"
         },
         {
           "id": 4,
-          "name": "Contact",
+          "name": "联系我们",
           "link": "/contact"
         }
       ]
     },
     "footer": {
-      "title": "Contact Us",
-      "locationTitle": "Office Address",
+      "title": "联系我们",
+      "locationTitle": "公司地址",
       "location": "4-4-1 4F, Twin Ichinohashi No. 2 building, Azabujuban, Minato-ku, Tokyo",
-      "emailTitle": "Email Us",
+      "emailTitle": "联系我们",
       "email": "info@kanroku.tokyo",
       "copyright": "©2023, KANROKU"
     }
@@ -42,7 +42,7 @@
       {
         "id": 1,
         "title": { "first": "Real Estate", "second": "in Japan" },
-        "content": "Choosing the correct real estate agent to purchase your home is one of the most important decisions you’ll make. Your home is a very personal, important, and valuable asset, and it can be an emotional and complicated endeavor to purchase it, especially in today’s challenging marketplace. Numerous questions and concerns will need to be addressed, and the advice and consultation that you receive can make a tremendous difference in the results.",
+        "content": "Your home is a very personal, important, and valuable asset, and it can be an emotional and complicated endeavor to purchase it, especially in today's challenging marketplace.",
         "image": "/assets/img/slid/n/japandi1.jpeg",
         "buttonText": "Discover Work",
         "buttonLink": "/properties"
@@ -50,7 +50,7 @@
       {
         "id": 2,
         "title": { "first": "Inventment", "second": "" },
-        "content": "kanroku is truly a full-service brokerage, and  we are not just a real estate agent, Its a licensed real estate broker, as well as a licensed and practiced attorney and contractor in Japan. kanroku is truly a full-service brokerage, and  we are not just a real estate agent, Its a licensed real estate broker, as well as a licensed and practiced attorney and contractor in Japan.",
+        "content": "Kanroku is truly a full-service brokerage, and  we are not just a real estate agent, Its a licensed real estate broker, as well as a licensed and practiced attorney and contractor in Japan.",
         "image": "/assets/img/slid/n/japanese_home1.jpeg",
         "buttonText": "Discover Work",
         "buttonLink": "/properties"
@@ -68,8 +68,8 @@
           "id": 1,
           "image": "/assets/img/rocks.jpg",
           "icon": "icon flaticon-computer",
-          "title": "Brokerage",
-          "content": "An excellent agent will make a proposal that is close to each customer. Since there are few companies in Japan that provide services with overseas investors in mind, we will strive to be a bridge between them.",
+          "title": "房地产中介",
+          "content": "一个优秀的中介会为每个客户量身定做提案。由于日本很少有房地产公司为海外投资者提供服务，我们将努力成为日本市场与海外投资家之间的桥梁。",
           "buttonText": "Read More",
           "buttonLink": "/market-overview"
         },
@@ -77,8 +77,8 @@
           "id": 2,
           "image": "/assets/img/rocks.jpg",
           "icon": "icon flaticon-plan",
-          "title": "Management business",
-          "content": "（sophisticated management）We provide condominium management by professional staff with high expertise. Utilizing our own condominium management information system, We propose optimal management services that match the current condition of the customer's condominium.",
+          "title": "物业管理业务",
+          "content": "我们由具有高度专业知识的专业人员提供物业管理。 利用独自的物业管理信息系统，我们将提供符合您公寓现状的最佳管理服务。",
           "buttonText": "Read More",
           "buttonLink": "/market-overview"
         },
@@ -86,8 +86,8 @@
           "id": 3,
           "image": "/assets/img/rocks.jpg",
           "icon": "icon flaticon-desk-lamp",
-          "title": "Extensive network",
-          "content": "Utilizing our network of personal connections unique to Japanese people, we carefully support everything from acquiring properties that are difficult to obtain information to consulting on borrowing from Japanese banks when purchasing real estate, and after that, from management to sales.",
+          "title": "广泛的网络",
+          "content": "利用日本本地特有的人脉网络，从获取难以获取信息的房产到购买房地产时从日本银行借款的咨询，再到管理到销售，我们将都提供周到的服务。",
           "buttonText": "Read More",
           "buttonLink": "/market-overview"
         }
@@ -100,7 +100,7 @@
       },
       "image1": "/assets/img/two_nobg.png",
       "image2": "/assets/img/japandi_1.jpeg",
-      "content": "Our vision is to position Japan as a major investment market and bring short and long term benefits to our clients. Through its deep expertise and extensive network, Kanroku provides valuable support to meet our customer needs.",
+      "content": "我们的愿景是将日本定位为主要投资市场并为我们的客户带来短期和长期利益。通过其深厚的专业知识和广泛的网络，Kanroku 提供有价值的支持以满足我们的客户需求。",
 
       "exp": 21,
       "list": [
@@ -129,7 +129,7 @@
     ],
     "team": {
       "title": "Team",
-      "description": "We are an agent-type real estate brokerage company that gathers bilingual human resources and mediates mainly Japanese real estate to overseas investors.",
+      "description": "我们是一家代理型的房地产经纪公司，聚集双语人力资源，主要向海外投资者中介日本房地产。",
       "slider": [
         {
           "id": 1,
@@ -139,7 +139,7 @@
           "behance": "#",
           "linkedin": "https://www.linkedin.com/in/shiho-kawamoto-97921617a/?originalSubdomain=jp",
           "username": "Shiho Kawamoto",
-          "usertitle": "CEO, Serial Entrepreneur, Board Member. Shiho Founded kanroku Inc. in November 2020."
+          "usertitle": "CEO, 2020年11月成立Kanroku"
         },
         {
           "id": 2,
@@ -149,7 +149,7 @@
           "behance": "#",
           "linkedin": "https://www.linkedin.com/in/%E5%AF%8C-%E3%82%88%E3%82%88-961081a8/?originalSubdomain=jp",
           "username": "Yoyo Tomi",
-          "usertitle": "Co-Partner, Prior to joining Kanroku Inc. since 2023, Yoyo was at Operations division at Morgan Stanley."
+          "usertitle": "合伙人，在 2023 年加入 Kanroku 之前、yoyo 在 Morgan Stanley operations 部门工作"
         },
         {
           "id": 3,
@@ -173,7 +173,7 @@
     "post": {
       "title": "Value Proposition",
       "date": "2023/5/3",
-      "content": "<h6>Strong market potential</h6><p>The size of the real estate market in Japan is 44 trillion yen as a whole, of which 4.4 trillion yen is for brokerage alone. Even though it’s not small, there are few real estate agents in the market that specialize in foreign investors.</p><h6>Advantage in sales strategy</h6><p>By conducting sales activities in English and Chinese, we are able to overcome language barriers and make proposals that better fit the needs of our customers, achieving high customer satisfaction. In addition, we aim for rapid expansion by making full use of the personal connections and know-how that we have cultivated so far.</p><h6>Diversified culture</h6><p>In a male-dominated, conservative industry, the opposite concept of a bilingual female sales force becomes superiority and differentiation in the existing industry.</p>"
+      "content": "<h6>强大的市场潜力</h6><p>日本的房地产市场规模整体上是44万亿日元，其中仅经纪业务就有4.4万亿日元。尽管规模不小，但市场上专门为外国投资者服务的房地产经纪人却很少。<h6>销售策略的优势</h6><p>通过用英文和中文进行销售活动，我们能够克服语言障碍，提出更适合客户需求的建议，实现高客户满意度。此外，我们的目标是通过充分利用迄今为止所培养的人际关系和专业知识，实现快速扩张。<h6>多元化的文化</h6><p>在一个以男性为主导的保守的房地产行业，双语女性销售队伍的相反概念成为现有行业的优势和差异化。"
     }
   },
   "contact": {
@@ -264,8 +264,16 @@
       "title": "introduction",
       "description": "We are a Creative Agency &amp; Startup Studio that provides Digital Products and Services turns to focus on client success. We specialize in user interface design, including front-end development which we consider to be an integral part.",
       "list": [
-        { "id": 1, "title": "Client", "list": [{ "id": 1, "text": "Envato.com", "link": "#" }] },
-        { "id": 2, "title": "Date", "list": [{ "id": 1, "text": "6 August 2022" }] },
+        {
+          "id": 1,
+          "title": "Client",
+          "list": [{ "id": 1, "text": "Envato.com", "link": "#" }]
+        },
+        {
+          "id": 2,
+          "title": "Date",
+          "list": [{ "id": 1, "text": "6 August 2022" }]
+        },
         {
           "id": 3,
           "title": "Categories",

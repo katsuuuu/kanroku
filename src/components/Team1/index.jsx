@@ -42,7 +42,7 @@ class Team1 extends React.Component {
                 className="team-container"
                 {...{
                   ref: (c) => (this.slider = c),
-                  slidesToShow: 2,
+                  slidesToShow: 3,
                   slidesToScroll: 1,
                   arrows: true,
                   dots: false,
@@ -74,7 +74,10 @@ class Team1 extends React.Component {
                       returnObjects: true,
                     })
                     .map((item) => (
-                      <div className="item wow fadeInUp" data-wow-delay=".3s" key={item.id}>
+                      <div
+                        className="item wow fadeInUp"
+                        data-wow-delay=".3s"
+                        key={item.id}>
                         <div className="img wow imago">
                           <img src={item.image} alt="" />
                           <div className="social">

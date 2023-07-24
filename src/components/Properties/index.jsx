@@ -44,14 +44,14 @@ const Properties = ({ data, categories }) => {
           <div className="row justify-content-center m-0">
             <div className="">
               <div className="post">
-                <div className="title-head">
+                {/* <div className="title-head">
                   <h2>Properties</h2>
                   <div className="info">
                     <p>
                       <a>Upon a request</a>
                     </p>
                   </div>
-                </div>
+                </div> */}
                 <div className="content pt-20">
                   <div className="flex-column-reverse flex-lg-row d-flex justify-content-between m-0">
                     <div className="col-lg-10 p-0">
@@ -130,8 +130,7 @@ const Properties = ({ data, categories }) => {
                         categories.categories.data.map(({ attributes }) => (
                           <li
                             onClick={() => handleCategory(attributes.Slug)}
-                            key={attributes.Slug}
-                          >
+                            key={attributes.Slug}>
                             {attributes.Title}
                           </li>
                         ))
