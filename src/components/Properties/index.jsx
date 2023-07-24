@@ -6,8 +6,6 @@ import { useTranslation } from "react-i18next";
 import thumparallaxUp from "../../common/thumparallaxUp";
 
 const Properties = ({ data, categories }) => {
-  const { t, ready } = useTranslation("common");
-  // const [posts, setPosts] = useState(t("blogs.posts", { returnObjects: true, useSuspense: false }));
   const [posts, setPosts] = useState(data?.properties.data);
 
   const properties = data?.properties.data.slice(0);
@@ -35,6 +33,7 @@ const Properties = ({ data, categories }) => {
 
     setPosts(filtered);
   };
+  
   return (
     <>
       <section className="blog-pg single section-padding">
@@ -55,51 +54,69 @@ const Properties = ({ data, categories }) => {
                     <div className="col-lg-10 p-0">
                       <div className="posts row m-0">
                         {/* {ready && */}
-                        {posts.map((item) => (
-                          <div className="item mb-80 col-lg-6" key={item.id}>
-                            <div className="img">
-                              <Link
-                                href={`/properties/${item.attributes.Slug}`}>
-                                <a>
-                                  <img
-                                    src={item.attributes.Image}
-                                    alt=""
-                                    className="thumparallax"
-                                  />
-                                </a>
-                              </Link>
-                            </div>
-                            <div className="content">
-                              <div className="cont">
-                                <div className="tags">
-                                  {item.attributes.categories.data.map(
-                                    ({ attributes }) => (
-                                      <Link
-                                        href={`/${attributes.Slug}`}
-                                        key={attributes.Slug}>
-                                        <a>{attributes.Title}</a>
-                                      </Link>
-                                    )
-                                  )}
-                                </div>
-
-                                <h4 className="title">
-                                  <Link
-                                    href={`/properties/${item.attributes.Slug}`}>
-                                    {item.attributes.Title}
-                                  </Link>
-                                </h4>
-
+                        {posts.length > 0 ? (
+                          posts.map((item) => (
+                            <div className="item mb-80 col-lg-6" key={item.id}>
+                              <div className="img">
                                 <Link
-                                  href={`/properties/${item.attributes.Slug}`}>
-                                  <a className="more">
-                                    {item.attributes.ButtonText}
+                                  href={`/properties/${item.attributes.Slug}`}
+                                >
+                                  <a>
+                                    <img
+                                      src={item.attributes.Image}
+                                      alt=""
+                                      className="thumparallax"
+                                    />
                                   </a>
                                 </Link>
                               </div>
+                              <div className="content">
+                                <div className="cont">
+                                  <div className="tags">
+                                    {item.attributes.categories.data.map(
+                                      ({ attributes }) => (
+                                        <Link
+                                          href={`/${attributes.Slug}`}
+                                          key={attributes.Slug}
+                                        >
+                                          <a>{attributes.Title}</a>
+                                        </Link>
+                                      )
+                                    )}
+                                  </div>
+
+                                  <h4 className="title">
+                                    <Link
+                                      href={`/properties/${item.attributes.Slug}`}
+                                    >
+                                      {item.attributes.Title}
+                                    </Link>
+                                  </h4>
+
+                                  <Link
+                                    href={`/properties/${item.attributes.Slug}`}
+                                  >
+                                    <a className="more">
+                                      {item.attributes.ButtonText}
+                                    </a>
+                                  </Link>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        ))}
+                          ))
+                        ) : (
+                          <section>
+                            <div className="container">
+                              <div className="row">
+                                <div className="col-12">
+                                  <div className="text-center">
+                                    <h2>No Properties Found</h2>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                        )}
                       </div>
                     </div>
 
