@@ -154,7 +154,7 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
               </li> */}
             </ul>
 
-            <ul className="locales">
+            <ul className="locales justify-content-center">
               {router.locales.map((locale) => (
                 <li onClick={() => handleLocaleChange(locale)} key={locale}>
                   {locale}
