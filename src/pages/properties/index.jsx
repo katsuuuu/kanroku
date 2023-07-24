@@ -44,7 +44,6 @@ const BlogDetails = ({ data, categories }) => {
 
   useEffect(() => {
     // const isLoggedIn = localStorage.getItem("isLoggedIn") || false;
-    console.log("isLoggedIn useEff", isLoggedIn);
     setIsLogged(Boolean(isLoggedIn === "true" || isLoggedIn));
     setIsVisible(isLoggedIn === "false" || !isLoggedIn ? true : false);
 
@@ -66,8 +65,6 @@ const BlogDetails = ({ data, categories }) => {
       document.querySelector("body").classList.remove("properties-hidden");
     }
   }, [isLogged, isLoggedIn]);
-
-  console.log("isLogged", isLogged);
 
   return (
     <LightLayout>
