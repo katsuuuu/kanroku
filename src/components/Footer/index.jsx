@@ -38,9 +38,9 @@ const Footer = ({ classText }) => {
                 <img src="/assets/img/kanroku_white.png" alt="" />
               </div>
               <div className="social">
-                <Link href="#">
+                <Link href="https://www.linkedin.com/company/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BEkanroku/about/">
                   <a>
-                    <i className="fab fa-facebook-f"></i>
+                    <i className="fab fa-linkedin"></i>
                   </a>
                 </Link>
                 {/* <Link href="#">
@@ -48,11 +48,11 @@ const Footer = ({ classText }) => {
                     <i className="fab fa-twitter"></i>
                   </a>
                 </Link> */}
-                <Link href="#">
+                {/* <Link href="#">
                   <a>
                     <i className="fab fa-instagram"></i>
                   </a>
-                </Link>
+                </Link> */}
                 {/* <Link href="#">
                   <a>
                     <i className="fab fa-youtube"></i>
