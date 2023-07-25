@@ -6,7 +6,7 @@ const ContactWithMap = () => {
   const { t } = useTranslation("common");
   return (
     <div className="container-fluid">
-      <div className="row">
+      <div className="row contact-map justify-content-center">
         <div className="col-lg-6 map-box">
           {/* <iframe src={appData.mapIframe}></iframe> */}
 
@@ -21,7 +21,7 @@ const ContactWithMap = () => {
             <a href="https://www.maps.ie/distance-area-calculator.html">measure distance on map</a>
           </iframe>
         </div>
-        <div className="col-lg-6 form">
+        {/* <div className="col-lg-6 form">
           <form id="contact-form" method="post">
             <div className="messages"></div>
 
@@ -60,7 +60,7 @@ const ContactWithMap = () => {
               </button>
             </div>
           </form>
-        </div>
+        </div> */}
       </div>
     </div>
   );

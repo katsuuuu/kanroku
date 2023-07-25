@@ -12,7 +12,7 @@ import { useEffect } from "react";
 import { Api } from "../../api";
 
 const Navbar = ({ navbarRef, logoRef, logoClass }) => {
-  const [test, setTest] = React.useState([]);
+  // const [test, setTest] = React.useState([]);
   const router = useRouter();
   const { t, ready } = useTranslation("common");
 
@@ -34,31 +34,35 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
   };
 
   const handleMobileDropdown = (e) => {
-    document.getElementById("navbarSupportedContent").classList.toggle("show-with-trans");
+    document
+      .getElementById("navbarSupportedContent")
+      .classList.toggle("show-with-trans");
   };
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(async () => {
-    const propertySlug = await Api.properties.getPropertyId(router.query.slug, router.locale);
+  // useEffect(async () => {
+  //   const propertySlug = await Api.properties.getPropertyId(router.query.slug, router.locale);
 
-    const getPropertyId = await Api.properties.getPropertiesById(
-      propertySlug.properties.data[0].attributes.PropertyId,
-      // router.locale,
-      "all",
-    );
+  //   const getPropertyId = await Api.properties.getPropertiesById(
+  //     propertySlug.properties.data[0].attributes.PropertyId,
+  //     // router.locale,
+  //     "all",
+  //   );
 
-    setTest(getPropertyId);
-  }, [router]);
+  //   setTest(getPropertyId);
+  // }, [router]);
 
   const handleLocaleChange = (locale) => {
     if (router.route === "/properties/[slug]") {
-      test.properties.data.map((el) => {
-        if (el.attributes.locale === locale) {
-          router.push(`/properties/${el.attributes.Slug}`, `/properties/${el.attributes.Slug}`, {
-            locale,
-          });
-        }
-      });
+      return;
+
+      // test.properties.data.map((el) => {
+      //   if (el.attributes.locale === locale) {
+      //     router.push(`/properties/${el.attributes.Slug}`, `/properties/${el.attributes.Slug}`, {
+      //       locale,
+      //     });
+      //   }
+      // });
     } else {
       router.push(router.route, router.asPath, {
         locale,
@@ -86,7 +90,8 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
             data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
-            aria-label="Toggle navigation">
+            aria-label="Toggle navigation"
+          >
             <span className="icon-bar">
               <i className="fas fa-bars"></i>
             </span>
@@ -100,7 +105,10 @@ const Navbar = ({ navbarRef, logoRef, logoClass }) => {
                 </Link>
               </li> */}
 
-              {t("layout.header.menu", { returnObjects: true, useSuspense: false }).map((item) => (
+              {t("layout.header.menu", {
+                returnObjects: true,
+                useSuspense: false,
+              }).map((item) => (
                 <li className="nav-item" key={item.id}>
                   <Link href={item.link}>
                     <a className="nav-link">{item.name}</a>
