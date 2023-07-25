@@ -3,10 +3,10 @@ import { gql } from "graphql-request";
 import { client } from "../index";
 
 export const properties = {
-  getProperties: (locale) => {
+  getProperties: () => {
     const query = gql`
-      query Properties($locale: I18NLocaleCode) {
-        properties(locale: $locale) {
+      query Properties {
+        properties {
           data {
             id
             attributes {
@@ -36,7 +36,7 @@ export const properties = {
       }
     `;
 
-    return client.request(query, { locale });
+    return client.request(query);
   },
 
   getProperty: (slug, locale) => {

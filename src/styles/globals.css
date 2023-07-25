@@ -421,3 +421,20 @@ body.hideX .pace {
 .login-form button:hover {
   opacity: 0.8;
 }
+
+.english-properties {
+  color: #191514;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+}
+
+.contact-map {
+  height: 400px;
+}
+
+@media (min-width: 991px) {
+  .contact-map {
+    height: 620px;
+  }
+}

@@ -48,7 +48,8 @@ const Property = ({ data }) => {
 export default Property;
 
 export const getStaticProps = async ({ params, locale }) => {
-  const data = await Api.properties.getProperty(params.slug, locale);
+  // const data = await Api.properties.getProperty(params.slug, locale);
+  const data = await Api.properties.getProperty(params.slug, "en");
 
   return {
     props: {
@@ -60,28 +61,31 @@ export const getStaticProps = async ({ params, locale }) => {
 
 export const getStaticPaths = async () => {
   const enData = await Api.properties.getProperties("en");
-  const jaData = await Api.properties.getProperties("ja");
-  const zhData = await Api.properties.getProperties("zh-CN");
+  // const jaData = await Api.properties.getProperties("ja");
+  // const zhData = await Api.properties.getProperties("zh-CN");
 
-  const paths = [
-    ...enData.properties.data.map((property) => ({
-      params: { slug: property.attributes.Slug },
-      locale: "en",
-    })),
-    ...jaData.properties.data.map((property) => ({
-      params: { slug: property.attributes.Slug },
-      locale: "ja",
-    })),
-    ...zhData.properties.data.map((property) => ({
-      params: { slug: property.attributes.Slug },
-      locale: "zh-CN",
-    })),
-  ];
+  // const paths = [
+  //   ...enData.properties.data.map((property) => ({
+  //     params: { slug: property.attributes.Slug },
+  //     locale: "en",
+  //   })),
+  //   ...jaData.properties.data.map((property) => ({
+  //     params: { slug: property.attributes.Slug },
+  //     locale: "ja",
+  //   })),
+  //   ...zhData.properties.data.map((property) => ({
+  //     params: { slug: property.attributes.Slug },
+  //     locale: "zh-CN",
+  //   })),
+  // ];
+
+  const paths = enData.properties.data.map((property) => ({
+    params: { slug: property.attributes.Slug },
+    locale: "en",
+  }));
 
   return {
     paths: paths || [],
-    // fallback: "blocking",
     fallback: true,
-    // fallback: false,
   };
 };
