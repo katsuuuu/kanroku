@@ -8,17 +8,17 @@
       "menu": [
         {
           "id": 1,
-          "name": "Team",
+          "name": "チーム",
           "link": "/about"
         },
         {
           "id": 2,
-          "name": "Market Overview",
+          "name": "概要",
           "link": "/market-overview"
         },
         {
           "id": 3,
-          "name": "Properties",
+          "name": "不動産情報",
           "link": "/properties"
         },
         {
@@ -30,8 +30,8 @@
     },
     "footer": {
       "title": "Contact Us",
-      "locationTitle": "Office Address",
-      "location": "4-4-1 4F, Twin Ichinohashi No. 2 building, Azabujuban, Minato-ku, Tokyo",
+      "locationTitle": "会社住所",
+      "location": "東京都港区麻布十番4-4-1ツイン一橋２号館2041",
       "emailTitle": "Email Us",
       "email": "info@kanroku.tokyo",
       "copyright": "©2023, KANROKU"
@@ -42,17 +42,17 @@
       {
         "id": 1,
         "title": { "first": "Real Estate", "second": "in Japan" },
-        "content": "Choosing the correct real estate agent to purchase your home is one of the most important decisions you’ll make. Your home is a very personal, important, and valuable asset, and it can be an emotional and complicated endeavor to purchase it, especially in today’s challenging marketplace. Numerous questions and concerns will need to be addressed, and the advice and consultation that you receive can make a tremendous difference in the results.",
+        "content": "Your home is a very personal, important, and valuable asset, and it can be an emotional and complicated endeavor to purchase it, especially in today's challenging marketplace.",
         "image": "/assets/img/slid/n/japandi1.jpeg",
-        "buttonText": "Discover Work",
+        "buttonText": "詳細",
         "buttonLink": "/properties"
       },
       {
         "id": 2,
         "title": { "first": "Inventment", "second": "" },
-        "content": "kanroku is truly a full-service brokerage, and  we are not just a real estate agent, Its a licensed real estate broker, as well as a licensed and practiced attorney and contractor in Japan. kanroku is truly a full-service brokerage, and  we are not just a real estate agent, Its a licensed real estate broker, as well as a licensed and practiced attorney and contractor in Japan.",
+        "content": "Kanroku is truly a full-service brokerage, and  we are not just a real estate agent, Its a licensed real estate broker, as well as a licensed and practiced attorney and contractor in Japan. kanroku is truly a full-service brokerage, and  we are not just a real estate agent, Its a licensed real estate broker, as well as a licensed and practiced attorney and contractor in Japan.",
         "image": "/assets/img/slid/n/japanese_home1.jpeg",
-        "buttonText": "Discover Work",
+        "buttonText": "詳細",
         "buttonLink": "/properties"
       }
     ],
@@ -68,8 +68,8 @@
           "id": 1,
           "image": "/assets/img/rocks.jpg",
           "icon": "icon flaticon-computer",
-          "title": "Brokerage",
-          "content": "An excellent agent will make a proposal that is close to each customer. Since there are few companies in Japan that provide services with overseas investors in mind, we will strive to be a bridge between them.",
+          "title": "仲介業",
+          "content": "優秀なエージェントが、お客様一人ひとりに寄り添った提案を致します。海外投資家に寄り添ったサービスを提供する会社は日本には少ない為、その架け橋になれるように努めてまいります。",
           "buttonText": "Read More",
           "buttonLink": "/market-overview"
         },
@@ -77,8 +77,8 @@
           "id": 2,
           "image": "/assets/img/rocks.jpg",
           "icon": "icon flaticon-plan",
-          "title": "Management business",
-          "content": "（sophisticated management）We provide condominium management by professional staff with high expertise. Utilizing our own condominium management information system, We propose optimal management services that match the current condition of the customer's condominium.",
+          "title": "不動産管理業",
+          "content": "高い専門性を持った専門スタッフによるマンション管理をご提供します。 独自のマンション管理情報システムを活用し、お客様のマンションの現状に合わせた最適な管理サービスをご提案します。",
           "buttonText": "Read More",
           "buttonLink": "/market-overview"
         },
@@ -86,8 +86,8 @@
           "id": 3,
           "image": "/assets/img/rocks.jpg",
           "icon": "icon flaticon-desk-lamp",
-          "title": "Extensive network",
-          "content": "Utilizing our network of personal connections unique to Japanese people, we carefully support everything from acquiring properties that are difficult to obtain information to consulting on borrowing from Japanese banks when purchasing real estate, and after that, from management to sales.",
+          "title": "幅広いネットワーク",
+          "content": "日本人ならではの人脈を活かし、情報が入手しにくい物件の取得から、不動産購入時の日本の銀行からの借入相談、その後の管理から販売まで丁寧にサポートいたします。",
           "buttonText": "Read More",
           "buttonLink": "/market-overview"
         }
@@ -100,21 +100,21 @@
       },
       "image1": "/assets/img/two_nobg.png",
       "image2": "/assets/img/japandi_1.jpeg",
-      "content": "Our vision is to position Japan as a major investment market and bring short and long term benefits to our clients. Through its deep expertise and extensive network, Kanroku provides valuable support to meet our customer needs.",
+      "content": "私たちのビジョンは、日本を主要な投資市場として位置づけ、お客様に短期的および長期的な利益をもたらすことです。 KANROKUは深い専門知識と広範なネットワークを通じて、お客様のニーズに応える価値あるサポートを提供します。",
 
       "exp": 21,
       "list": [
         {
           "id": 1,
-          "name": "Extensive Network"
+          "name": "仲介業"
         },
         {
           "id": 2,
-          "name": "Deep Expertise"
+          "name": "不動産管理業"
         },
         {
           "id": 3,
-          "name": "Bilingual"
+          "name": "幅広いネットワーク"
         }
       ],
       "buttonText": "About Us",
@@ -129,7 +129,7 @@
     ],
     "team": {
       "title": "Team",
-      "description": "We are an agent-type real estate brokerage company that gathers bilingual human resources and mediates mainly Japanese real estate to overseas investors.",
+      "description": "当社はバイリンガル人材を集め、主に日本の不動産を海外投資家に仲介するエージェント型の不動産仲介会社です。",
       "slider": [
         {
           "id": 1,
@@ -138,8 +138,8 @@
           "twitter": "#",
           "behance": "#",
           "linkedin": "https://www.linkedin.com/in/shiho-kawamoto-97921617a/?originalSubdomain=jp",
-          "username": "Shiho Kawamoto",
-          "usertitle": "CEO, Serial Entrepreneur, Board Member. Shiho Founded kanroku Inc. in November 2020."
+          "username": "河本　志穂",
+          "usertitle": "CEO　2020年11月に株式会社kanrokuを創業。"
         },
         {
           "id": 2,
@@ -148,8 +148,8 @@
           "twitter": "#",
           "behance": "#",
           "linkedin": "https://www.linkedin.com/in/%E5%AF%8C-%E3%82%88%E3%82%88-961081a8/?originalSubdomain=jp",
-          "username": "Yoyo Tomi",
-          "usertitle": "Co-Partner, Prior to joining Kanroku Inc. since 2023, Yoyo was at Operations division at Morgan Stanley."
+          "username": "富　よよ",
+          "usertitle": "モルガン・スタンレー証券オペレーションズに入社。2023年より株式会社kanrokuに参画。"
         },
         {
           "id": 3,
@@ -173,7 +173,7 @@
     "post": {
       "title": "Value Proposition",
       "date": "2023/5/3",
-      "content": "<h6>Strong market potential</h6><p>The size of the real estate market in Japan is 44 trillion yen as a whole, of which 4.4 trillion yen is for brokerage alone. Even though it’s not small, there are few real estate agents in the market that specialize in foreign investors.</p><h6>Advantage in sales strategy</h6><p>By conducting sales activities in English and Chinese, we are able to overcome language barriers and make proposals that better fit the needs of our customers, achieving high customer satisfaction. In addition, we aim for rapid expansion by making full use of the personal connections and know-how that we have cultivated so far.</p><h6>Diversified culture</h6><p>In a male-dominated, conservative industry, the opposite concept of a bilingual female sales force becomes superiority and differentiation in the existing industry.</p>"
+      "content": "<h6>強力な市場ポテンシャル</h6><p>日本の不動産市場規模は全体で44兆円、そのうち仲介だけで4.4兆円。 小さくはないとはいえ、外国人投資家を専門に扱う不動産業者は市場にはほとんどありません。</p><h6>営業戦略上の競争優位性</h6><p>英語と中国語で営業活動を行うことで、言葉の壁を越えてお客様のニーズに合わせた提案を行うことができ、高い顧客満足度を実現しております。 また、これまで培ってきた人脈やノウハウを駆使し、飛躍的な拡大を目指します。</p><h6>多様な文化</h6><p>男性中心の保守的な業界において、バイリンガルの女性営業マンを主体とするという対極のコンセプトが既存業界の優位性と差別化となる。</p>"
     }
   },
   "contact": {
@@ -264,8 +264,16 @@
       "title": "introduction",
       "description": "We are a Creative Agency &amp; Startup Studio that provides Digital Products and Services turns to focus on client success. We specialize in user interface design, including front-end development which we consider to be an integral part.",
       "list": [
-        { "id": 1, "title": "Client", "list": [{ "id": 1, "text": "Envato.com", "link": "#" }] },
-        { "id": 2, "title": "Date", "list": [{ "id": 1, "text": "6 August 2022" }] },
+        {
+          "id": 1,
+          "title": "Client",
+          "list": [{ "id": 1, "text": "Envato.com", "link": "#" }]
+        },
+        {
+          "id": 2,
+          "title": "Date",
+          "list": [{ "id": 1, "text": "6 August 2022" }]
+        },
         {
           "id": 3,
           "title": "Categories",
